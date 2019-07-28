@@ -63,6 +63,8 @@ The solution is called a SQL view layer (https://docs.geoserver.org/stable/en/us
 GeoServer allows for specifying SQL statements containing placeholders that are filled with parameters contained within a WFS request.
 This SQL statements are executed within a previously specified database.
 
+![SQL View configuration in GeoServer](geoserver_editSqlView.png)
+
 ### Step 3.1: The SQL Code
 
 The SQL code calculating a set of height values (and some other parameters that might be needed, like the distance from one point to the previous one) of a given input linestring looks like this:
