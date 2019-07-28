@@ -43,7 +43,7 @@ raster2pgsql -t 100x100 -s 31287 -I merged.tif public.bev50 > bev50.sql
 ```
 
 This will create the file `bev50.sql` containing raster data from `merged.tif` within the table `public.bev50` in SQL syntax. Be cautios, if you resampled the TIFF file in the previous step, you will produce a SQL file with about 20 GB in size.
-The flag `-I` ensures that a spatial index is created. The parameter `-t 100x100` ensures that raster data is stored in 100x100 pixel tiles. These two parameters are important, otherwise, the height profile generation will be very slow.
+The flag `-I` ensures that a spatial index is created. The parameter `-t 100x100` ensures that raster data is stored in 100x100 pixel tiles. These two parameters are important, otherwise, the height profile generation will be very slow. A value of 100x100 pixel has been deemed an optimum between processing time, size and speed. (the values 10x10, 100x100 and 1000x1000 were tested)
 The parameter `-s 31287` ensures that the correct EPSG is used.
 
 The generated SQL file can now be loaded into the PostGIS database. This may take a while.
@@ -51,6 +51,8 @@ The generated SQL file can now be loaded into the PostGIS database. This may tak
 ```bash
 sudo -u postgres psql -f /tmp/bev50.sql
 ```
+
+The resulting PostGIS table will occupy about 3.8GB of disk space. Please bare in mind, that this is value is for 500% of the original size because of the bilinear resizing perfomed earlier. If a lower quality suffices for you or you do not need interpolated values, the size will be dramatically lower.
 
 ## Step 3: Set up the Height Profile WFS in GeoServer
 
@@ -123,24 +125,44 @@ In the field reserved for the SQL query enter the SQL code from above.
 
 Refresh the xxx and xxx. The parameters present in the SQL code will be listed. You have the chance to enter default values, should whoever will use this service later on forget to explicitly specify one of the needed parameters. It is a good idea to at least specify the default parameter for `HP_DETAIL`.
 
+#### Regex Patterns
+
 By using regex pattern the allowed letters and numbers for the parameters can be specified. We should make use of this feature to prevent SQL injection attacks.
-A thing we have to modify is the regex pattern for the `HP_LINE` parameter to make it work:
+
+A thing we **have** to modify is the regex pattern for the `HP_LINE` parameter to make it work:
 
 ```
-^[\w\d\s\.\,]+$
+^[\d\s\.\,]+$
+```
+
+The pattern for the parameter `HP_DETAIL` should look like this:
+
+```
+^\d+\.?\d*$
+```
+
+The pattern for the parameter `HP_SRID` can simply be:
+
+```
+^[\d]+$
 ```
 
 The inclusion of the `.` and `,` character is necessary to be able to specify a linestring as a parameter.
 
+## Step 4: Querying the Height Service
+
 To query for a specific linestring, the query would look like this if we want to receive the data as CSV:
 
 ```
-localhost:8084/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=hoehenprofil100&outputFormat=csv&viewparams=HP_DETAIL:20;HP_LINE:548739.4158097792%20482604.95651756704\,%20548887.1511324001%20482564.2491758545\,%20548918.931103315%20482692.24078587623\,%20549028.5070438745%20482647.3753966963\,%20549040.1888613633%20482689.00756518065\,%20549104.3323370679%20482674.76536810625\,%20549349.1178396618%20482827.3313487823\,%20549781.0141441664%20482895.7332890254;HP_SRID:31287
+localhost:8084/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=hoehenprofil100&outputFormat=csv&viewparams=HP_DETAIL:20;HP_LINE:548739.4%20482604.9\,%20548887.1%20482564.2\,%20548918.9%20482692.2\,%20549028.5%20482647.3\,%20549040.1%20482689.0\,%20549104.3%20482674.7\,%20549349.1%20482827.3\,%20549781.0%20482895.7;HP_SRID:31287
 ```
 
 Note, how each `,` character is escaped by a backslash (`\`).
 
-## Step 4: Displaying the results
+To get the results in a different format, one simply has to change the default WMS parameter `outputFormat` and GeoServer will deliver the data in any format it is able to provide.
+
+
+## Step 5: Displaying the results
 
 Most likely the service will be queried from within a website with the help of JavaScript code. So, the result needs to be displayed to the user by the same means.
 It would not look nice if we just present the user with a table containing the results, so let's use a library called *chart.js* (https://www.chartjs.org) to display the height profile.
