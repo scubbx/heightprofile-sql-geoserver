@@ -1,4 +1,4 @@
-# Height profile as a service
+# Height profile as a Service
 
 I could not find a best-practice example to implement a height profile service, so I did one myself.
 In this example, a height profile service is provided by the means of a OGC WFS service, using only a default PostGIS and GeoServer installation.
@@ -176,5 +176,5 @@ And as GML:
 ## Step 5: Displaying the results
 
 Most likely the service will be queried from within a website with the help of JavaScript code. So, the result needs to be displayed to the user by the same means.
-It would not look nice if we just present the user with a table containing the results, so let's use a library called *chart.js* (https://www.chartjs.org) to display the height profile.
+It would not look nice if we just present the user with a table containing the results (although, in some cases it would probably suffice), so let's use a library called *chart.js* (https://www.chartjs.org) to display the height profile.
 
