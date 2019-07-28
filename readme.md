@@ -63,6 +63,8 @@ The solution is called a SQL view layer (https://docs.geoserver.org/stable/en/us
 GeoServer allows for specifying SQL statements containing placeholders that are filled with parameters contained within a WFS request.
 This SQL statements are executed within a previously specified database.
 
+The final configuration:
+
 ![SQL View configuration in GeoServer](geoserver_editSqlView.png)
 
 ### Step 3.1: The SQL Code
@@ -178,3 +180,6 @@ And as GML:
 Most likely the service will be queried from within a website with the help of JavaScript code. So, the result needs to be displayed to the user by the same means.
 It would not look nice if we just present the user with a table containing the results (although, in some cases it would probably suffice), so let's use a library called *chart.js* (https://www.chartjs.org) to display the height profile.
 
+```
+-----> to be done ----> stay tuned
+```
