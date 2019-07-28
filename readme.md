@@ -21,33 +21,35 @@ Any valid GDAL raster data source is supported if it can be converted to a TIFF 
 In this example, the data provided by BEV is a set of single ArcGIS *.asc rasters. Luckily we can merge them together with gdal_merge.
 
 ```
-code example pending
+gdal_merge.py -o merged_low.tif *.asc
 ```
 
 Depending on the desired resolution and whether an interpolation should take place or not, the original TIFF containing the height map needs to be up/downscaled.
 
 ```bash
-gdal_translate -outsize 300% 0 -r bilinear merged_low.tif merged.tif
+gdal_translate -outsize 500% 0 -r bilinear -a_srs EPSG:31287 -co COMPRESS=LZW -co NUM_THREADS=ALL_CPUS -co BIGTIFF=YES merged_low.tif merged.tif
 ```
 
 The upscaling using bilinear filtering is relevant if you are planning to query points in a higher density than the raster resolution is. If you do not interpolate the raster beforehand, points of the linestring forming the route for the height profile being near each other will sometimes probe the same raster cell for height information which does not look nice.
+We use LZW compression here since the the upscaled TIFF file will need a lot of space (around 4 GB with compression) and LZW is a bit faster then Deflate compression.
+We also set the coordinat system with the parameter `-a_srs EPSG:31287`.
 
 ## Step 2: Import TIFF raster into PostGIS
 
 When the height map file has been prepared as a TIFF, it can be converted into SQL INSERT statements with a command line tool provided by PostGIS itself:
 
 ```bash
-raster2pgsql -t 10x10 -s 31287 -I merged.tif public.bev50 > bev50.sql
+raster2pgsql -t 100x100 -s 31287 -I merged.tif public.bev50 > bev50.sql
 ```
 
-This will create the file `bev50.sql` containing raster data from `merged.tif` within the table `public.bev50` in SQL syntax.
-The flag `-I` ensures that a spatial index is created. The parameter `-t 10x10` ensures that raster data is stored in 10x10 pixel tiles. These two parameters are important, otherwise, the height profile generation will be very slow.
+This will create the file `bev50.sql` containing raster data from `merged.tif` within the table `public.bev50` in SQL syntax. Be cautios, if you resampled the TIFF file in the previous step, you will produce a SQL file with about 20 GB in size.
+The flag `-I` ensures that a spatial index is created. The parameter `-t 100x100` ensures that raster data is stored in 100x100 pixel tiles. These two parameters are important, otherwise, the height profile generation will be very slow.
 The parameter `-s 31287` ensures that the correct EPSG is used.
 
 The generated SQL file can now be loaded into the PostGIS database. This may take a while.
 
 ```bash
-psql -f /tmp/bev50.sql
+sudo -u postgres psql -f /tmp/bev50.sql
 ```
 
 ## Step 3: Set up the Height Profile WFS in GeoServer
@@ -122,12 +124,21 @@ In the field reserved for the SQL query enter the SQL code from above.
 Refresh the xxx and xxx. The parameters present in the SQL code will be listed. You have the chance to enter default values, should whoever will use this service later on forget to explicitly specify one of the needed parameters. It is a good idea to at least specify the default parameter for `HP_DETAIL`.
 
 By using regex pattern the allowed letters and numbers for the parameters can be specified. We should make use of this feature to prevent SQL injection attacks.
+A thing we have to modify is the regex pattern for the `HP_LINE` parameter to make it work:
+
+```
+^[\w\d\s\.\,]+$
+```
+
+The inclusion of the `.` and `,` character is necessary to be able to specify a linestring as a parameter.
 
 To query for a specific linestring, the query would look like this if we want to receive the data as CSV:
 
 ```
-example pending
+localhost:8084/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=hoehenprofil100&outputFormat=csv&viewparams=HP_DETAIL:20;HP_LINE:548739.4158097792%20482604.95651756704\,%20548887.1511324001%20482564.2491758545\,%20548918.931103315%20482692.24078587623\,%20549028.5070438745%20482647.3753966963\,%20549040.1888613633%20482689.00756518065\,%20549104.3323370679%20482674.76536810625\,%20549349.1178396618%20482827.3313487823\,%20549781.0141441664%20482895.7332890254;HP_SRID:31287
 ```
+
+Note, how each `,` character is escaped by a backslash (`\`).
 
 ## Step 4: Displaying the results
 
