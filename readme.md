@@ -129,7 +129,7 @@ Refresh the xxx and xxx. The parameters present in the SQL code will be listed. 
 
 By using regex pattern the allowed letters and numbers for the parameters can be specified. We should make use of this feature to prevent SQL injection attacks.
 
-A thing we **have** to modify is the regex pattern for the `HP_LINE` parameter to make it work:
+A thing we **have** to modify is the regex pattern for the `HP_LINE` parameter to make it work (the inclusion of the `.` and `,` character is necessary to be able to specify a linestring as a parameter):
 
 ```
 ^[\d\s\.\,]+$
@@ -147,8 +147,6 @@ The pattern for the parameter `HP_SRID` can simply be:
 ^[\d]+$
 ```
 
-The inclusion of the `.` and `,` character is necessary to be able to specify a linestring as a parameter.
-
 ## Step 4: Querying the Height Service
 
 To query for a specific linestring, the query would look like this if we want to receive the data as CSV:
@@ -161,6 +159,17 @@ Note, how each `,` character is escaped by a backslash (`\`).
 
 To get the results in a different format, one simply has to change the default WMS parameter `outputFormat` and GeoServer will deliver the data in any format it is able to provide.
 
+Example output as CSV (most probably the smallest format):
+
+![Example output as CSV](csv_output.png)
+
+The same output as Json:
+
+![Example output as Json](json_output.png)
+
+And as GML:
+
+![Example output as GML](gml_output.png)
 
 ## Step 5: Displaying the results
 
