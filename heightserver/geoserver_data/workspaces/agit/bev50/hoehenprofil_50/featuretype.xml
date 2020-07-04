@@ -1,0 +1,106 @@
+<featureType>
+  <id>FeatureTypeInfoImpl-754f3ae4:1731710132b:-7ff2</id>
+  <name>hoehenprofil_50</name>
+  <nativeName>hoehenprofil_50</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl-754f3ae4:1731710132b:-7ff5</id>
+  </namespace>
+  <title>hoehenprofil_50</title>
+  <keywords>
+    <string>features</string>
+    <string>hoehenprofil_50</string>
+  </keywords>
+  <nativeCRS class="projected">PROJCS[&quot;MGI / Austria Lambert&quot;, 
+  GEOGCS[&quot;MGI&quot;, 
+    DATUM[&quot;Militar-Geographische Institut&quot;, 
+      SPHEROID[&quot;Bessel 1841&quot;, 6377397.155, 299.1528128, AUTHORITY[&quot;EPSG&quot;,&quot;7004&quot;]], 
+      TOWGS84[601.705, 84.263, 485.227, 4.7354, -1.3145, -5.393, -2.3887], 
+      AUTHORITY[&quot;EPSG&quot;,&quot;6312&quot;]], 
+    PRIMEM[&quot;Greenwich&quot;, 0.0, AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]], 
+    UNIT[&quot;degree&quot;, 0.017453292519943295], 
+    AXIS[&quot;Geodetic longitude&quot;, EAST], 
+    AXIS[&quot;Geodetic latitude&quot;, NORTH], 
+    AUTHORITY[&quot;EPSG&quot;,&quot;4312&quot;]], 
+  PROJECTION[&quot;Lambert_Conformal_Conic_2SP&quot;, AUTHORITY[&quot;EPSG&quot;,&quot;9802&quot;]], 
+  PARAMETER[&quot;central_meridian&quot;, 13.333333333333336], 
+  PARAMETER[&quot;latitude_of_origin&quot;, 47.5], 
+  PARAMETER[&quot;standard_parallel_1&quot;, 48.99999999999999], 
+  PARAMETER[&quot;false_easting&quot;, 400000.0], 
+  PARAMETER[&quot;false_northing&quot;, 400000.0], 
+  PARAMETER[&quot;scale_factor&quot;, 1.0], 
+  PARAMETER[&quot;standard_parallel_2&quot;, 46.0], 
+  UNIT[&quot;m&quot;, 1.0], 
+  AXIS[&quot;Easting&quot;, EAST], 
+  AXIS[&quot;Northing&quot;, NORTH], 
+  AUTHORITY[&quot;EPSG&quot;,&quot;31287&quot;]]</nativeCRS>
+  <srs>EPSG:31287</srs>
+  <nativeBoundingBox>
+    <minx>548739.415809779</minx>
+    <maxx>549781.014144166</maxx>
+    <miny>482564.249175854</miny>
+    <maxy>482895.733289025</maxy>
+    <crs class="projected">EPSG:31287</crs>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>15.332369563241487</minx>
+    <maxx>15.346503022491202</maxx>
+    <miny>48.22555388077033</miny>
+    <maxy>48.22877667853386</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <metadata>
+    <entry key="JDBC_VIRTUAL_TABLE">
+      <virtualTable>
+        <name>hoehenprofil_50</name>
+        <sql>with pointline as (&#xd;
+	select st_setsrid(geomdumppoints.geom, 31287) as geom&#xd;
+	from&#xd;
+	(SELECT (ST_DumpPoints(&#xd;
+	        ST_Segmentize(&#xd;
+	            ST_GeomFromText(replace(&apos;LINESTRING ( %HP_LINE% )&apos;,&apos;bs&apos;, &apos;,&apos;), %HP_SRID% ),&#xd;
+	            %HP_DETAIL%&#xd;
+	        )&#xd;
+	   )).geom ) as geomdumppoints&#xd;
+)&#xd;
+SELECT row_number() OVER () AS id, round(ST_Distance(p.geom, lag(p.geom, 1) OVER ())::numeric,2) as distance,st_setsrid(p.geom, 31287) as geom, round(ST_Value(r.rast, (ST_Dump(p.geom)).geom)::numeric,2) As z&#xd;
+FROM pointline AS p, bev50 AS r&#xd;
+WHERE ST_Intersects(r.rast, ST_SetSRID(p.geom, 31287)::geometry)
+</sql>
+        <escapeSql>false</escapeSql>
+        <geometry>
+          <name>geom</name>
+          <type>Point</type>
+          <srid>31287</srid>
+        </geometry>
+        <parameter>
+          <name>HP_DETAIL</name>
+          <defaultValue>50</defaultValue>
+          <regexpValidator>^[\d\s\.\,]+$</regexpValidator>
+        </parameter>
+        <parameter>
+          <name>HP_SRID</name>
+          <defaultValue>31287</defaultValue>
+          <regexpValidator>^\d+\.?\d*$</regexpValidator>
+        </parameter>
+        <parameter>
+          <name>HP_LINE</name>
+          <defaultValue>548739.4158097792 482604.95651756704bs 548887.1511324001 482564.2491758545bs 548918.931103315 482692.24078587623bs 549028.5070438745 482647.3753966963bs 549040.1888613633 482689.00756518065bs 549104.3323370679 482674.76536810625bs 549349.1178396618 482827.3313487823bs 549781.0141441664 482895.7332890254</defaultValue>
+          <regexpValidator>.*</regexpValidator>
+        </parameter>
+      </virtualTable>
+    </entry>
+  </metadata>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl-754f3ae4:1731710132b:-7ff4</id>
+  </store>
+  <serviceConfiguration>false</serviceConfiguration>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <padWithZeros>false</padWithZeros>
+  <forcedDecimal>false</forcedDecimal>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>
