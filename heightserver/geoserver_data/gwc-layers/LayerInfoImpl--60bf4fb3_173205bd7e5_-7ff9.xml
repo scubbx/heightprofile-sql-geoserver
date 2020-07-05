@@ -1,8 +1,8 @@
 <GeoServerTileLayer>
-  <id>LayerInfoImpl-754f3ae4:1731710132b:-7ff1</id>
+  <id>LayerInfoImpl--60bf4fb3:173205bd7e5:-7ff9</id>
   <enabled>true</enabled>
   <inMemoryCached>true</inMemoryCached>
-  <name>agit:hoehenprofil_50</name>
+  <name>agit:hoehenprofil_50_backup</name>
   <mimeFormats>
     <string>image/png</string>
     <string>image/jpeg</string>

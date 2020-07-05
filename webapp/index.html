@@ -4,36 +4,17 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
       <title>HowTo: Mini-Beispiel "Leaflet Karte mit Marker"</title>
-      <!-- leaflet.css und leaflet.js von externer Quelle einbinden -->
-      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
-      <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+      <link rel="stylesheet" href="css/leaflet.css" />
+      <link rel="stylesheet" href="css/leaflet.draw.css" />
+      <script src="js/leaflet.js"></script>
+      <script src="js/leaflet.draw.js"></script>
    </head>
    <body>
-      <div id='meineKarte' style='height: 800px; width: 100%;'></div>
-      <!-- OSM-Basiskarte einfügen und zentrieren -->
-      <script type='text/javascript'>
-        var map = L.map('meineKarte').setView([51.75840, 6.39612], 15);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          'attribution':  'Kartendaten &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> Mitwirkende',
-          'useCache': true
-        }).addTo(map);
-
-
-        <!-- Marker einfügen -->
-        // var marker = L.marker([51.76148,6.39604]).addTo(Karte);
-        
-        // FeatureGroup is to store editable layers
-        var drawnItems = new L.FeatureGroup();
-        map.addLayer(drawnItems);
-        var drawControl = new L.Control.Draw({
-            edit: {
-                featureGroup: drawnItems
-            }
-        });
-        map.addControl(drawControl);
-        
-        var toolbar = L.Toolbar();
-        toolbar.addToolbar(map);
-      </script>
+      <div id='meineKarte' style='height: 400px; width: 100%;'></div>
+      <p>Detailgrad der Abfrage: <input id="detail" type="text" value="50"></p>
+      <div height="200px" width="100%"><canvas id="kurve" width="100%" height="200px"></canvas></div>
    </body>
+   <script src="js/jquery-3.4.1.min.js" type="text/javascript"></script>
+   <script src="js/Chart.bundle.min.js" type="text/javascript"></script>
+   <script src="js/appcode.js" type="text/javascript"></script>
 </html>

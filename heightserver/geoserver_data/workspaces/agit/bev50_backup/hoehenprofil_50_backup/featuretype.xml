@@ -1,14 +1,14 @@
 <featureType>
-  <id>FeatureTypeInfoImpl-754f3ae4:1731710132b:-7ff2</id>
-  <name>hoehenprofil_50</name>
-  <nativeName>hoehenprofil_50</nativeName>
+  <id>FeatureTypeInfoImpl--60bf4fb3:173205bd7e5:-7ffa</id>
+  <name>hoehenprofil_50_backup</name>
+  <nativeName>hoehenprofil_50_backup</nativeName>
   <namespace>
     <id>NamespaceInfoImpl-754f3ae4:1731710132b:-7ff5</id>
   </namespace>
-  <title>hoehenprofil_50</title>
+  <title>hoehenprofil_50_backup</title>
   <keywords>
     <string>features</string>
-    <string>hoehenprofil_50</string>
+    <string>hoehenprofil_50_backup</string>
   </keywords>
   <nativeCRS class="projected">PROJCS[&quot;MGI / Austria Lambert&quot;, 
   GEOGCS[&quot;MGI&quot;, 
@@ -35,17 +35,17 @@
   AUTHORITY[&quot;EPSG&quot;,&quot;31287&quot;]]</nativeCRS>
   <srs>EPSG:31287</srs>
   <nativeBoundingBox>
-    <minx>548739.415809779</minx>
-    <maxx>549781.014144166</maxx>
-    <miny>482564.249175854</miny>
-    <maxy>482895.733289025</maxy>
+    <minx>107709.54832622746</minx>
+    <maxx>694850.0828413537</maxx>
+    <miny>277761.1565844528</miny>
+    <maxy>575885.6025930198</maxy>
     <crs class="projected">EPSG:31287</crs>
   </nativeBoundingBox>
   <latLonBoundingBox>
-    <minx>15.332369563241487</minx>
-    <maxx>15.346503022491202</maxx>
-    <miny>48.22555388077033</miny>
-    <maxy>48.22877667853386</maxy>
+    <minx>9.332248748539177</minx>
+    <maxx>17.36209060516101</maxx>
+    <miny>46.335011547547836</miny>
+    <maxy>49.08227897828972</maxy>
     <crs>EPSG:4326</crs>
   </latLonBoundingBox>
   <projectionPolicy>FORCE_DECLARED</projectionPolicy>
@@ -53,22 +53,23 @@
   <metadata>
     <entry key="JDBC_VIRTUAL_TABLE">
       <virtualTable>
-        <name>hoehenprofil_50</name>
+        <name>hoehenprofil_50_backup</name>
         <sql>with pointline as (&#xd;
 	select st_setsrid(geomdumppoints.geom, 31287) as geom&#xd;
 	from&#xd;
 	(SELECT (ST_DumpPoints(&#xd;
 	        ST_Segmentize(&#xd;
-	            ST_GeomFromText(replace(&apos;LINESTRING ( %HP_LINE% )&apos;,&apos;bs&apos;, &apos;,&apos;), %HP_SRID% ),&#xd;
+	            st_transform(ST_GeomFromText(replace(&apos;LINESTRING ( %HP_LINE% )&apos;,&apos;bs&apos;, &apos;,&apos;), %HP_SRID% ), 31287),&#xd;
 	            %HP_DETAIL%&#xd;
 	        )&#xd;
 	   )).geom ) as geomdumppoints&#xd;
 )&#xd;
 SELECT row_number() OVER () AS id, round(ST_Distance(p.geom, lag(p.geom, 1) OVER ())::numeric,2) as distance,st_setsrid(p.geom, 31287) as geom, round(ST_Value(r.rast, (ST_Dump(p.geom)).geom)::numeric,2) As z&#xd;
-FROM pointline AS p, bev50 AS r&#xd;
-WHERE ST_Intersects(r.rast, ST_SetSRID(p.geom, 31287)::geometry)
+FROM pointline AS p, bev50_backup AS r&#xd;
+WHERE r.rast &amp;&amp; p.geom
 </sql>
         <escapeSql>false</escapeSql>
+        <keyColumn>id</keyColumn>
         <geometry>
           <name>geom</name>
           <type>Point</type>
