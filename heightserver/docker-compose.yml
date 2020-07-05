@@ -25,3 +25,4 @@ services:
       - 8088:8080
     volumes:
       - ./geoserver_data:/opt/geoserver/data_dir
+      - ./../webapp:/opt/geoserver/data_dir/www
