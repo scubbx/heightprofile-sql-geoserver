@@ -11036,3 +11036,345 @@ Request: getFeature
 2020-07-05 21:36:11,218 INFO [storage.DefaultStorageBroker] - Destroying StorageBroker
 2020-07-05 21:36:11,232 WARN [support.DisposableBeanAdapter] - Destroy method 'destroy' on bean with name 'gwcMemoryBlobStore' threw an exception: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@306a869[Not completed, task = org.geowebcache.storage.blobstore.memory.MemoryBlobStore$BlobStoreTask@1d4c8dda] rejected from java.util.concurrent.ThreadPoolExecutor@30feab46[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 1]
 2020-07-05 21:36:11,235 WARN [support.DisposableBeanAdapter] - Invocation of destroy method failed on bean with name 'geoServerLoader': org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'wmsLifecycleHandler': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+2020-07-05 21:45:25,142 INFO [geoserver.logging] - Suppressing StdOut logging.  If you want to see GeoServer logs, be sure to look in '/opt/geoserver/data_dir/logs/geoserver.log'
+2020-07-05 21:45:27,397 WARN [geoserver.monitor] - monitoring storage memory not found, falling back to 'memory'
+2020-07-05 21:45:27,665 INFO [flow.config] - Loaded control-flow rule: ows.global=100
+2020-07-05 21:45:27,666 INFO [flow.config] - Loaded control-flow rule: ows.wms.getmap=10
+2020-07-05 21:45:27,666 INFO [flow.config] - Loaded control-flow rule: ows.wfs.getfeature.application/msexcel=4
+2020-07-05 21:45:27,668 INFO [flow.config] - Loaded control-flow rule: user=6
+2020-07-05 21:45:27,668 INFO [flow.config] - Loaded control-flow rule: ows.gwc=16
+2020-07-05 21:45:27,673 INFO [flow.config] - Loaded control-flow rule: user.ows.wps.execute=1000/d;30s
+2020-07-05 21:45:27,673 INFO [geoserver.flow] - Control-flow active with 6 flow controllers
+2020-07-05 21:45:27,896 INFO [org.geoserver] - GeoServer configuration lock is enabled
+2020-07-05 21:45:27,959 INFO [org.geoserver] - Loading catalog...
+2020-07-05 21:45:28,026 INFO [org.geoserver] - Loaded style 'generic'
+2020-07-05 21:45:28,027 INFO [org.geoserver] - Loaded style 'point'
+2020-07-05 21:45:28,027 INFO [org.geoserver] - Loaded style 'raster'
+2020-07-05 21:45:28,028 INFO [org.geoserver] - Loaded style 'line'
+2020-07-05 21:45:28,028 INFO [org.geoserver] - Loaded style 'polygon'
+2020-07-05 21:45:28,032 INFO [org.geoserver] - Loaded default workspace agit
+2020-07-05 21:45:28,045 INFO [org.geoserver] - Loaded workspace 'agit'
+2020-07-05 21:45:28,595 INFO [org.geoserver] - Loaded data store 'bev50_backup', enabled
+2020-07-05 21:45:29,705 INFO [org.geoserver] - Loaded feature type 'hoehenprofil_50_backup', enabled
+2020-07-05 21:45:29,718 INFO [org.geoserver] - Loaded layer 'hoehenprofil_50_backup'
+2020-07-05 21:45:29,721 INFO [org.geoserver] - Read catalog in 1.760 s
+2020-07-05 21:45:29,818 INFO [org.geoserver] - Loaded service 'WCSInfoImpl-13a03eea:17320f0f7d9:-8000', enabled
+2020-07-05 21:45:29,824 INFO [org.geoserver] - Loaded service 'WFSInfoImpl-13a03eea:17320f0f7d9:-7fff', enabled
+2020-07-05 21:45:29,834 INFO [org.geoserver] - Loaded service 'WMSInfoImpl-13a03eea:17320f0f7d9:-7ffe', enabled
+2020-07-05 21:45:29,836 INFO [org.geoserver] - Loaded service 'WMTSInfoImpl-13a03eea:17320f0f7d9:-7ffd', enabled
+2020-07-05 21:45:29,852 INFO [org.geoserver] - Loaded service 'WPSInfoImpl-754f3ae4:1731710132b:-7ff7', enabled
+2020-07-05 21:45:29,879 INFO [config.GeoserverXMLResourceProvider] - Will look for 'geowebcache.xml' in directory '/opt/geoserver/data_dir/gwc'.
+2020-07-05 21:45:29,931 INFO [config.GeoserverXMLResourceProvider] - Found configuration file in /opt/geoserver/data_dir/gwc
+2020-07-05 21:45:29,931 INFO [config.GeoserverXMLResourceProvider] - Found configuration file in /opt/geoserver/data_dir/gwc
+2020-07-05 21:45:29,931 INFO [config.GeoserverXMLResourceProvider] - Found configuration file in /opt/geoserver/data_dir/gwc
+2020-07-05 21:45:29,995 WARN [config.XMLConfiguration] - ********************************************************************************
+2020-07-05 21:45:29,995 WARN [config.XMLConfiguration] - *** GWC configuration validation error: cvc-elt.1.a: Cannot find the declaration of element 'gwcConfiguration'.
+2020-07-05 21:45:29,995 WARN [config.XMLConfiguration] - *** Will try to use configuration anyway. Please check the order of declared elements against the schema.
+2020-07-05 21:45:29,996 WARN [config.XMLConfiguration] - ********************************************************************************
+2020-07-05 21:45:30,043 INFO [config.XMLConfiguration] - Initializing GridSets from /opt/geoserver/data_dir/gwc
+2020-07-05 21:45:30,044 INFO [config.XMLConfiguration] - Initializing layers from /opt/geoserver/data_dir/gwc
+2020-07-05 21:45:30,084 INFO [gwc.layer] - Initializing GWC configuration based on GeoServer's Catalog
+2020-07-05 21:45:30,084 INFO [gwc.layer] - GeoServer TileLayer store base directory is: gwc-layers
+2020-07-05 21:45:30,084 INFO [gwc.layer] - Loading tile layers from gwc-layers
+2020-07-05 21:45:30,116 INFO [gwc.layer] - Loaded 1 tile layers in 30.37 ms
+2020-07-05 21:45:30,132 INFO [storage.BlobStoreAggregator] - BlobStoreConfiguration /opt/geoserver/data_dir/gwc contained no blob store infos.
+2020-07-05 21:45:30,140 INFO [storage.DefaultStorageFinder] - ***********************************************************************************************************************************
+2020-07-05 21:45:30,140 INFO [storage.DefaultStorageFinder] - *** Found System environment variable GEOWEBCACHE_CACHE_DIR set to /opt/geoserver/data_dir/gwc, using it as the default prefix. ***
+2020-07-05 21:45:30,140 INFO [storage.DefaultStorageFinder] - ***********************************************************************************************************************************
+2020-07-05 21:45:30,225 INFO [gwc.config] - Initializing GeoServer specific GWC configuration from gwc-gs.xml
+2020-07-05 21:45:30,710 INFO [config.GeoserverXMLResourceProvider] - Will look for 'geowebcache-diskquota.xml' in directory '/opt/geoserver/data_dir/gwc'.
+2020-07-05 21:45:30,719 INFO [config.GeoserverXMLResourceProvider] - Will look for 'geowebcache-diskquota-jdbc.xml' in directory '/opt/geoserver/data_dir/gwc'.
+2020-07-05 21:45:30,722 INFO [diskquota.ConfigLoader] - DiskQuota configuration is not readable: /opt/geoserver/data_dir/gwc/geowebcache-diskquota.xml
+2020-07-05 21:45:30,730 INFO [diskquota.ConfigLoader] - DiskQuota configuration is not readable: /opt/geoserver/data_dir/gwc/geowebcache-diskquota.xml
+2020-07-05 21:45:30,731 INFO [diskquota.DiskQuotaMonitor] - Setting up disk quota periodic enforcement task
+2020-07-05 21:45:30,731 INFO [diskquota.DiskQuotaMonitor] - 0 layers configured with their own quotas. 
+2020-07-05 21:45:30,732 INFO [diskquota.DiskQuotaMonitor] - 1 layers attached to global quota 500.0 MB
+2020-07-05 21:45:30,761 INFO [diskquota.DiskQuotaMonitor] - Disk quota periodic enforcement task set up every 10 SECONDS
+2020-07-05 21:45:31,357 WARN [gce.imagemosaic] - Unable to set ordering between tiff readers spi
+2020-07-05 21:45:31,435 INFO [geoserver.monitor] - Monitor extension enabled
+2020-07-05 21:45:32,682 WARN [turbojpeg.TurboJPEGMapResponse] - The turbo jpeg encoder is available for usage
+2020-07-05 21:45:33,614 INFO [geowebcache.GeoWebCacheDispatcher] - Invoked setServletPrefix(gwc)
+2020-07-05 21:45:33,623 INFO [georss.GeoRSSPoller] - Initializing GeoRSS poller in a background job...
+2020-07-05 21:45:33,627 INFO [georss.GeoRSSPoller] - No enabled GeoRSS feeds found, poller will not run.
+2020-07-05 21:45:33,680 INFO [wms.WMSService] - Will NOT recombine tiles for non-tiling clients.
+2020-07-05 21:45:33,680 INFO [wms.WMSService] - Will proxy requests to backend that are not getmap or getcapabilities.
+2020-07-05 21:45:33,852 INFO [geoserver.config] - Initiated CatalogTimeStampUpdater
+2020-07-05 21:45:34,020 INFO [geoserver.wps] - Found 5 bindable processes in GeoServer specific processes
+2020-07-05 21:45:34,064 INFO [geoserver.wps] - Found 89 bindable processes in Deprecated processes
+2020-07-05 21:45:34,066 INFO [geoserver.wps] - Blacklisting process ras:ConvolveCoverage as the input kernel of type class javax.media.jai.KernelJAI cannot be handled
+2020-07-05 21:45:34,073 INFO [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the input zones of type class java.lang.Object cannot be handled
+2020-07-05 21:45:34,073 INFO [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the input nodata of type class it.geosolutions.jaiext.range.Range cannot be handled
+2020-07-05 21:45:34,073 INFO [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the input rangeData of type class java.lang.Object cannot be handled
+2020-07-05 21:45:34,073 INFO [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the output zonal statistics of type interface java.util.List cannot be handled
+2020-07-05 21:45:34,074 INFO [geoserver.wps] - Found 18 bindable processes in Raster processes
+2020-07-05 21:45:34,079 INFO [geoserver.wps] - Found 48 bindable processes in Geometry processes
+2020-07-05 21:45:34,079 INFO [geoserver.wps] - Found 1 bindable processes in PolygonLabelProcess
+2020-07-05 21:45:34,086 INFO [geoserver.wps] - Found 31 bindable processes in Vector processes
+2020-07-05 21:45:34,769 WARN [servlet.BaseMapServlet] - Cannot delete file:/usr/local/tomcat/work/Catalina/localhost/geoserver/wicket-filestore
+2020-07-05 21:45:34,907 INFO [geoserver.security] - Start reloading user/groups for service named default
+2020-07-05 21:45:34,910 INFO [geoserver.security] - Reloading user/groups successful for service named default
+2020-07-05 21:45:35,045 INFO [geoserver.security] - AuthenticationCache Initialized with 1000 Max Entries, 300 seconds idle time, 600 seconds time to live and 3 concurrency level
+2020-07-05 21:45:35,045 INFO [geoserver.security] - AuthenticationCache Eviction Task created to run every 600 seconds
+2020-07-05 21:45:51,181 INFO [geoserver.security] - Strong cryptography is available
+2020-07-05 21:46:15,468 WARN [geoserver.catalog] - Unable to flush 'agit:hoehenprofil_50_backup
+java.io.IOException: Schema 'hoehenprofil_50_backup' does not exist.
+	at org.geotools.data.store.ContentDataStore.ensureEntry(ContentDataStore.java:533)
+	at org.geotools.data.store.ContentDataStore.getFeatureSource(ContentDataStore.java:331)
+	at org.geotools.data.store.ContentDataStore.getFeatureSource(ContentDataStore.java:303)
+	at org.geoserver.catalog.ResourcePool.flushState(ResourcePool.java:2679)
+	at org.geoserver.catalog.ResourcePool.flushDataStore(ResourcePool.java:2652)
+	at org.geoserver.catalog.ResourcePool$CacheClearingListener.handlePostModifyEvent(ResourcePool.java:2511)
+	at org.geoserver.catalog.impl.CatalogImpl.event(CatalogImpl.java:1735)
+	at org.geoserver.catalog.impl.CatalogImpl.firePostModified(CatalogImpl.java:1711)
+	at org.geoserver.catalog.impl.AbstractCatalogFacade.afterSaved(AbstractCatalogFacade.java:65)
+	at org.geoserver.catalog.impl.DefaultCatalogFacade.save(DefaultCatalogFacade.java:313)
+	at org.geoserver.catalog.impl.IsolatedCatalogFacade.save(IsolatedCatalogFacade.java:112)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.geoserver.catalog.LockingCatalogFacade.invoke(LockingCatalogFacade.java:36)
+	at com.sun.proxy.$Proxy33.save(Unknown Source)
+	at org.geoserver.catalog.impl.CatalogImpl.save(CatalogImpl.java:470)
+	at org.geoserver.security.SecureCatalogImpl.save(SecureCatalogImpl.java:1383)
+	at org.geoserver.catalog.impl.AbstractFilteredCatalog.save(AbstractFilteredCatalog.java:690)
+	at org.geoserver.catalog.impl.AbstractCatalogDecorator.save(AbstractCatalogDecorator.java:209)
+	at org.geoserver.web.data.resource.ResourceConfigurationPage.doSaveInternal(ResourceConfigurationPage.java:240)
+	at org.geoserver.web.publish.PublishedConfigurationPage.doSave(PublishedConfigurationPage.java:313)
+	at org.geoserver.web.publish.PublishedConfigurationPage$6.onSubmit(PublishedConfigurationPage.java:286)
+	at org.apache.wicket.markup.html.form.Form.delegateSubmit(Form.java:1309)
+	at org.apache.wicket.markup.html.form.Form.process(Form.java:976)
+	at org.apache.wicket.markup.html.form.Form.onFormSubmitted(Form.java:797)
+	at org.apache.wicket.markup.html.form.Form.onFormSubmitted(Form.java:708)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.wicket.RequestListenerInterface.internalInvoke(RequestListenerInterface.java:258)
+	at org.apache.wicket.RequestListenerInterface.invoke(RequestListenerInterface.java:216)
+	at org.apache.wicket.core.request.handler.ListenerInterfaceRequestHandler.invokeListener(ListenerInterfaceRequestHandler.java:241)
+	at org.apache.wicket.core.request.handler.ListenerInterfaceRequestHandler.respond(ListenerInterfaceRequestHandler.java:234)
+	at org.apache.wicket.request.cycle.RequestCycle$HandlerExecutor.respond(RequestCycle.java:895)
+	at org.apache.wicket.request.RequestHandlerStack.execute(RequestHandlerStack.java:64)
+	at org.apache.wicket.request.cycle.RequestCycle.execute(RequestCycle.java:265)
+	at org.apache.wicket.request.cycle.RequestCycle.processRequest(RequestCycle.java:222)
+	at org.apache.wicket.request.cycle.RequestCycle.processRequestAndDetach(RequestCycle.java:293)
+	at org.apache.wicket.protocol.http.WicketFilter.processRequestCycle(WicketFilter.java:261)
+	at org.apache.wicket.protocol.http.WicketFilter.processRequest(WicketFilter.java:203)
+	at org.apache.wicket.protocol.http.WicketServlet.doPost(WicketServlet.java:159)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.springframework.web.servlet.mvc.ServletWrappingController.handleRequestInternal(ServletWrappingController.java:166)
+	at org.springframework.web.servlet.mvc.AbstractController.handleRequest(AbstractController.java:177)
+	at org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter.handle(SimpleControllerHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.filters.CorsFilter.handleNonCORS(CorsFilter.java:352)
+	at org.apache.catalina.filters.CorsFilter.doFilter(CorsFilter.java:171)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.geoserver.filters.ThreadLocalsCleanupFilter.doFilter(ThreadLocalsCleanupFilter.java:26)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.geoserver.filters.SpringDelegatingFilter$Chain.doFilter(SpringDelegatingFilter.java:69)
+	at org.geoserver.wms.animate.AnimatorFilter.doFilter(AnimatorFilter.java:70)
+	at org.geoserver.filters.SpringDelegatingFilter$Chain.doFilter(SpringDelegatingFilter.java:66)
+	at org.geoserver.monitor.MonitorFilter.doFilter(MonitorFilter.java:88)
+	at org.geoserver.filters.SpringDelegatingFilter$Chain.doFilter(SpringDelegatingFilter.java:66)
+	at org.geoserver.flow.controller.IpBlacklistFilter.doFilter(IpBlacklistFilter.java:89)
+	at org.geoserver.filters.SpringDelegatingFilter$Chain.doFilter(SpringDelegatingFilter.java:66)
+	at org.geoserver.filters.SpringDelegatingFilter.doFilter(SpringDelegatingFilter.java:41)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.geoserver.platform.AdvancedDispatchFilter.doFilter(AdvancedDispatchFilter.java:37)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:70)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:74)
+	at org.geoserver.security.filter.GeoServerCompositeFilter.doFilter(GeoServerCompositeFilter.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:70)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:74)
+	at org.geoserver.security.filter.GeoServerCompositeFilter.doFilter(GeoServerCompositeFilter.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.geoserver.security.filter.GeoServerAnonymousAuthenticationFilter.doFilter(GeoServerAnonymousAuthenticationFilter.java:51)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:70)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:74)
+	at org.geoserver.security.filter.GeoServerCompositeFilter.doFilter(GeoServerCompositeFilter.java:91)
+	at org.geoserver.security.filter.GeoServerUserNamePasswordAuthenticationFilter.doFilter(GeoServerUserNamePasswordAuthenticationFilter.java:122)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:70)
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:158)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:74)
+	at org.geoserver.security.filter.GeoServerCompositeFilter.doFilter(GeoServerCompositeFilter.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:70)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.geoserver.security.filter.GeoServerSecurityContextPersistenceFilter$1.doFilter(GeoServerSecurityContextPersistenceFilter.java:52)
+	at org.geoserver.security.filter.GeoServerCompositeFilter$NestedFilterChain.doFilter(GeoServerCompositeFilter.java:74)
+	at org.geoserver.security.filter.GeoServerCompositeFilter.doFilter(GeoServerCompositeFilter.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.geoserver.security.GeoServerSecurityFilterChainProxy.doFilter(GeoServerSecurityFilterChainProxy.java:142)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.geoserver.filters.LoggingFilter.doFilter(LoggingFilter.java:101)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.geoserver.filters.XFrameOptionsFilter.doFilter(XFrameOptionsFilter.java:77)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.geoserver.filters.GZIPFilter.doFilter(GZIPFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.geoserver.filters.SessionDebugFilter.doFilter(SessionDebugFilter.java:46)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.geoserver.filters.FlushSafeFilter.doFilter(FlushSafeFilter.java:42)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:836)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1839)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-07-05 21:46:15,496 INFO [geoserver.gwc] - Saving GeoSeverTileLayer agit:hoehenprofil_50_backup
+2020-07-05 21:46:19,326 INFO [geoserver.wfs] - 
+Request: getServiceInfo
+2020-07-05 21:46:19,557 INFO [geoserver.flow] - Request [wfs 1.0.0 GetFeature] starting, processing through flow controllers
+2020-07-05 21:46:19,560 INFO [geoserver.flow] - Request control-flow performed, running requests: 1, blocked requests: 0
+2020-07-05 21:46:19,753 INFO [geoserver.wfs] - 
+Request: getFeature
+    service = wfs
+    version = 1.0.0
+    baseUrl = http://localhost:8088/geoserver/
+    query[0]:
+        srsName = EPSG:4326
+        typeName[0] = {agit}hoehenprofil_50_backup
+    outputFormat = application/json
+    resultType = results
+    viewParams[0] = {HP_DETAIL=50, HP_LINE=11.126060485839846 47.19717795172789bs 11.181850433349611 47.197294591633096bs 11.217727661132814 47.18772926790267, HP_SRID=4326}
+2020-07-05 21:46:19,781 INFO [wfs.json] - about to encode JSON
+2020-07-05 21:46:20,067 INFO [platform.resource] - Notifying ENTRY_MODIFY change on /opt/geoserver/data_dir/gwc-layers. Created: 0, removed: 0, modified: 1
+2020-07-05 21:46:20,646 INFO [geoserver.flow] - releasing flow controllers for [wfs 1.0.0 GetFeature]
+2020-07-05 21:46:20,646 INFO [geoserver.flow] - Request completed, running requests: 0, blocked requests: 0
+2020-07-05 21:46:25,173 INFO [geoserver.wfs] - 
+Request: getServiceInfo
+2020-07-05 21:46:25,174 INFO [geoserver.flow] - Request [wfs 1.0.0 GetFeature] starting, processing through flow controllers
+2020-07-05 21:46:25,174 INFO [geoserver.flow] - Request control-flow performed, running requests: 1, blocked requests: 0
+2020-07-05 21:46:25,178 INFO [geoserver.wfs] - 
+Request: getFeature
+    service = wfs
+    version = 1.0.0
+    baseUrl = http://localhost:8088/geoserver/
+    query[0]:
+        srsName = EPSG:4326
+        typeName[0] = {agit}hoehenprofil_50_backup
+    outputFormat = application/json
+    resultType = results
+    viewParams[0] = {HP_DETAIL=50, HP_LINE=11.379776000976562 47.25872815157012bs 11.701126098632812 47.280626498709545bs 11.70799255371094 47.21583707523794, HP_SRID=4326}
+2020-07-05 21:46:25,179 INFO [wfs.json] - about to encode JSON
+2020-07-05 21:46:25,884 INFO [geoserver.flow] - releasing flow controllers for [wfs 1.0.0 GetFeature]
+2020-07-05 21:46:25,884 INFO [geoserver.flow] - Request completed, running requests: 0, blocked requests: 0
+2020-07-05 21:46:34,794 INFO [geoserver.wfs] - 
+Request: getServiceInfo
+2020-07-05 21:46:34,795 INFO [geoserver.flow] - Request [wfs 1.0.0 GetFeature] starting, processing through flow controllers
+2020-07-05 21:46:34,796 INFO [geoserver.flow] - Request control-flow performed, running requests: 1, blocked requests: 0
+2020-07-05 21:46:34,799 INFO [geoserver.wfs] - 
+Request: getFeature
+    service = wfs
+    version = 1.0.0
+    baseUrl = http://localhost:8088/geoserver/
+    query[0]:
+        srsName = EPSG:4326
+        typeName[0] = {agit}hoehenprofil_50_backup
+    outputFormat = application/json
+    resultType = results
+    viewParams[0] = {HP_DETAIL=200, HP_LINE=12.387084960937502 47.90161354142077bs 13.337402343750002 47.7097615426664, HP_SRID=4326}
+2020-07-05 21:46:34,801 INFO [wfs.json] - about to encode JSON
+2020-07-05 21:46:35,449 INFO [geoserver.flow] - releasing flow controllers for [wfs 1.0.0 GetFeature]
+2020-07-05 21:46:35,449 INFO [geoserver.flow] - Request completed, running requests: 0, blocked requests: 0
+2020-07-05 21:46:41,948 INFO [geoserver.wfs] - 
+Request: getServiceInfo
+2020-07-05 21:46:41,949 INFO [geoserver.flow] - Request [wfs 1.0.0 GetFeature] starting, processing through flow controllers
+2020-07-05 21:46:41,949 INFO [geoserver.flow] - Request control-flow performed, running requests: 1, blocked requests: 0
+2020-07-05 21:46:41,951 INFO [geoserver.wfs] - 
+Request: getFeature
+    service = wfs
+    version = 1.0.0
+    baseUrl = http://localhost:8088/geoserver/
+    query[0]:
+        srsName = EPSG:4326
+        typeName[0] = {agit}hoehenprofil_50_backup
+    outputFormat = application/json
+    resultType = results
+    viewParams[0] = {HP_DETAIL=200, HP_LINE=15.150146484375002 47.12247581664114bs 14.782104492187502 47.204642388766935, HP_SRID=4326}
+2020-07-05 21:46:41,953 INFO [wfs.json] - about to encode JSON
+2020-07-05 21:46:42,490 INFO [geoserver.flow] - releasing flow controllers for [wfs 1.0.0 GetFeature]
+2020-07-05 21:46:42,490 INFO [geoserver.flow] - Request completed, running requests: 0, blocked requests: 0
+2020-07-05 21:46:48,129 INFO [geoserver.wfs] - 
+Request: getServiceInfo
+2020-07-05 21:46:48,130 INFO [geoserver.flow] - Request [wfs 1.0.0 GetFeature] starting, processing through flow controllers
+2020-07-05 21:46:48,130 INFO [geoserver.flow] - Request control-flow performed, running requests: 1, blocked requests: 0
+2020-07-05 21:46:48,133 INFO [geoserver.wfs] - 
+Request: getFeature
+    service = wfs
+    version = 1.0.0
+    baseUrl = http://localhost:8088/geoserver/
+    query[0]:
+        srsName = EPSG:4326
+        typeName[0] = {agit}hoehenprofil_50_backup
+    outputFormat = application/json
+    resultType = results
+    viewParams[0] = {HP_DETAIL=200, HP_LINE=16.803588867187504 47.90161354142077bs 16.479492187500004 48.06339653776214bs 16.430053710937504 47.77256035513371bs 15.897216796875002 47.74301740912185, HP_SRID=4326}
+2020-07-05 21:46:48,134 INFO [wfs.json] - about to encode JSON
+2020-07-05 21:46:48,810 INFO [geoserver.flow] - releasing flow controllers for [wfs 1.0.0 GetFeature]
+2020-07-05 21:46:48,810 INFO [geoserver.flow] - Request completed, running requests: 0, blocked requests: 0
+2020-07-05 21:47:59,233 INFO [georss.GeoRSSPoller] - destroy() invoked
+2020-07-05 21:47:59,234 INFO [geowebcache.GeoWebCacheDispatcher] - GeoWebCacheDispatcher.destroy() was invoked, shutting down.
+2020-07-05 21:47:59,257 INFO [diskquota.DiskQuotaMonitor] - Disk quota monitor shutting down...
+2020-07-05 21:47:59,258 INFO [diskquota.DiskQuotaMonitor] - Shutting down quota usage monitor...
+2020-07-05 21:47:59,258 INFO [diskquota.QuotaUpdatesMonitor] - Shutting down quota usage monitor...
+2020-07-05 21:47:59,261 INFO [diskquota.DiskQuotaMonitor] - Shutting down quota statistics gathering monitor...
+2020-07-05 21:47:59,261 INFO [diskquota.QueuedQuotaUpdatesConsumer] - Shutting down quota update background task due to InterruptedException
+2020-07-05 21:47:59,261 INFO [diskquota.QueuedUsageStatsConsumer] - Shutting down quota update background task due to interrupted exception
+2020-07-05 21:47:59,262 INFO [seed.SeederThreadPoolExecutor] - Initiating shut down for running and pending seed tasks...
+2020-07-05 21:47:59,262 INFO [seed.SeederThreadPoolExecutor] - Seeder thread pool executor shut down complete.
+2020-07-05 21:47:59,262 INFO [storage.DefaultStorageBroker] - Destroying StorageBroker
+2020-07-05 21:47:59,271 WARN [support.DisposableBeanAdapter] - Destroy method 'destroy' on bean with name 'gwcMemoryBlobStore' threw an exception: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@608cf408[Not completed, task = org.geowebcache.storage.blobstore.memory.MemoryBlobStore$BlobStoreTask@1d1ab404] rejected from java.util.concurrent.ThreadPoolExecutor@626d40f7[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 1]
+2020-07-05 21:47:59,274 WARN [support.DisposableBeanAdapter] - Invocation of destroy method failed on bean with name 'geoServerLoader': org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'wmsLifecycleHandler': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)

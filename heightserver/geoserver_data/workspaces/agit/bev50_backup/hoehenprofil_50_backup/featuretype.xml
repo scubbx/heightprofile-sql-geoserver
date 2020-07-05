@@ -88,7 +88,7 @@ WHERE r.rast &amp;&amp; p.geom
         <parameter>
           <name>HP_LINE</name>
           <defaultValue>548739.4158097792 482604.95651756704bs 548887.1511324001 482564.2491758545bs 548918.931103315 482692.24078587623bs 549028.5070438745 482647.3753966963bs 549040.1888613633 482689.00756518065bs 549104.3323370679 482674.76536810625bs 549349.1178396618 482827.3313487823bs 549781.0141441664 482895.7332890254</defaultValue>
-          <regexpValidator>.*</regexpValidator>
+          <regexpValidator>^[\d\s\.\,bs]+$</regexpValidator>
         </parameter>
       </virtualTable>
     </entry>

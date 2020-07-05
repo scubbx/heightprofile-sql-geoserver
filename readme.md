@@ -127,7 +127,7 @@ Then a new layer can be created. Select the option *Create new SQL View Layer*.
 
 In the field reserved for the SQL query enter the SQL code from above.
 
-Refresh the xxx and xxx. The parameters present in the SQL code will be listed. You have the chance to enter default values, should whoever will use this service later on forget to explicitly specify one of the needed parameters. It is a good idea to at least specify the default parameter for `HP_DETAIL`.
+Refresh the suggested Parameters. The parameters present in the SQL code will be listed. You have the chance to enter default values, should whoever will use this service later on forget to explicitly specify one of the needed parameters. It is a good idea to at least specify the default parameter for `HP_DETAIL`.
 
 #### Regex Patterns
 
@@ -136,7 +136,7 @@ By using regex pattern the allowed letters and numbers for the parameters can be
 A thing we **have** to modify is the regex pattern for the `HP_LINE` parameter to make it work (the inclusion of the `.` and `,` character is necessary to be able to specify a linestring as a parameter):
 
 ```
-^[\d\s\.\,]+$
+^[\d\s\.\,bs]+$
 ```
 
 The pattern for the parameter `HP_DETAIL` should look like this:
