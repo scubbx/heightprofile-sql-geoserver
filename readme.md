@@ -156,10 +156,10 @@ The pattern for the parameter `HP_SRID` can simply be:
 To query for a specific linestring, the query would look like this if we want to receive the data as CSV:
 
 ```
-localhost:8084/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=hoehenprofil100&outputFormat=csv&viewparams=HP_DETAIL:20;HP_LINE:548739.4%20482604.9\,%20548887.1%20482564.2\,%20548918.9%20482692.2\,%20549028.5%20482647.3\,%20549040.1%20482689.0\,%20549104.3%20482674.7\,%20549349.1%20482827.3\,%20549781.0%20482895.7;HP_SRID:31287
+localhost:8084/geoserver/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=hoehenprofil100&outputFormat=csv&viewparams=HP_DETAIL:20;HP_LINE:548739.4%20482604.9bs%20548887.1%20482564.2bs%20548918.9%20482692.2bs%20549028.5%20482647.3bs%20549040.1%20482689.0bs%20549104.3%20482674.7bs%20549349.1%20482827.3bs%20549781.0%20482895.7;HP_SRID:31287
 ```
 
-Note, how each `,` character is escaped by a backslash (`\`).
+Note, how each `,` character is replaced by `bs`.
 
 To get the results in a different format, one simply has to change the default WMS parameter `outputFormat` and GeoServer will deliver the data in any format it is able to provide.
 
