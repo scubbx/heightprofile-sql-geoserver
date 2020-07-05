@@ -84,7 +84,7 @@ with pointline as (
 )
 SELECT row_number() OVER () AS id, round(ST_Distance(p.geom, lag(p.geom, 1) OVER ())::numeric,2) as distance,st_setsrid(p.geom, 31287) as geom, round(ST_Value(r.rast, (ST_Dump(p.geom)).geom)::numeric,2) As z
 FROM pointline AS p, bev50 AS r
-WHERE ST_Intersects(r.rast, ST_SetSRID(p.geom, 31287)::geometry);
+WHERE r.rast && p.geom;
 ```
 
 Here, the parameters to be replaced are:
@@ -108,7 +108,7 @@ with pointline as (
 )
 SELECT row_number() OVER () AS id, round(ST_Distance(p.geom, lag(p.geom, 1) OVER ())::numeric,2) as distance, st_setsrid(p.geom, 31287) as geom, round(ST_Value(r.rast, (ST_Dump(p.geom)).geom)::numeric,2) As z
 FROM pointline AS p, bev50 AS r
-WHERE ST_Intersects(r.rast, ST_SetSRID(p.geom, 31287)::geometry);
+WHERE r.rast && p.geom;
 ```
 
 The result of this query will contain the following fields:
