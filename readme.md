@@ -180,6 +180,8 @@ And as GML:
 Most likely the service will be queried from within a website with the help of JavaScript code. So, the result needs to be displayed to the user by the same means.
 It would not look nice if we just present the user with a table containing the results (although, in some cases it would probably suffice), so let's use a library called *chart.js* (https://www.chartjs.org) to display the height profile.
 
-```
------> to be done ----> stay tuned
-```
+There is a quick and dirty demo for using this service in the folder `webapp`:
+
+![Demo WebApp](demo.png)
+
+This folder will be mounted automatically in the subdirectory `www` in the GeoServer url.
