@@ -1,3 +1,4 @@
 heightserver/bev-dgm/merge*
 heightserver/bev-dgm/*.sql
 heightserver/postgis_data
+heightserver/geoserver_data/logs/geoserver.log
