@@ -46,10 +46,17 @@ This will create the file `bev50.sql` containing raster data from `merged.tif` w
 The flag `-I` ensures that a spatial index is created. The parameter `-t 100x100` ensures that raster data is stored in 100x100 pixel tiles. These two parameters are important, otherwise, the height profile generation will be very slow. A value of 100x100 pixel has been deemed an optimum between processing time, size and speed. (the values 10x10, 100x100 and 1000x1000 were tested)
 The parameter `-s 31287` ensures that the correct EPSG is used.
 
+Make sure, the PostgreSQL database you want to use has the PostGIS and PostGIS raster extension enabled. To do this, the following commands can be issued:
+
+```bash
+psql -U postgres -h localhost -p 5434 -c 'create extension postgis;'
+psql -U postgres -h localhost -p 5434 -c 'create extension postgis_raster;'
+```
+
 The generated SQL file can now be loaded into the PostGIS database. This may take a while.
 
 ```bash
-sudo -u postgres psql -f /tmp/bev50.sql
+psql -U postgres -h localhost -p 5434 -f /tmp/bev50.sql
 ```
 
 The resulting PostGIS table will occupy about 3.8GB of disk space. Please bare in mind, that this is value is for 500% of the original size because of the bilinear resizing perfomed earlier. If a lower quality suffices for you or you do not need interpolated values, the size will be dramatically lower.
