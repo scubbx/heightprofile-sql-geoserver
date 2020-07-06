@@ -11378,3 +11378,914 @@ Request: getFeature
 2020-07-05 21:47:59,262 INFO [storage.DefaultStorageBroker] - Destroying StorageBroker
 2020-07-05 21:47:59,271 WARN [support.DisposableBeanAdapter] - Destroy method 'destroy' on bean with name 'gwcMemoryBlobStore' threw an exception: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@608cf408[Not completed, task = org.geowebcache.storage.blobstore.memory.MemoryBlobStore$BlobStoreTask@1d1ab404] rejected from java.util.concurrent.ThreadPoolExecutor@626d40f7[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 1]
 2020-07-05 21:47:59,274 WARN [support.DisposableBeanAdapter] - Invocation of destroy method failed on bean with name 'geoServerLoader': org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'wmsLifecycleHandler': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+2020-07-05 21:51:14,546 INFO [geoserver.logging] - Suppressing StdOut logging.  If you want to see GeoServer logs, be sure to look in '/opt/geoserver/data_dir/logs/geoserver.log'
+2020-07-05 21:51:16,847 WARN [geoserver.monitor] - monitoring storage memory not found, falling back to 'memory'
+2020-07-05 21:51:17,157 INFO [flow.config] - Loaded control-flow rule: ows.global=100
+2020-07-05 21:51:17,158 INFO [flow.config] - Loaded control-flow rule: ows.wms.getmap=10
+2020-07-05 21:51:17,158 INFO [flow.config] - Loaded control-flow rule: ows.wfs.getfeature.application/msexcel=4
+2020-07-05 21:51:17,160 INFO [flow.config] - Loaded control-flow rule: user=6
+2020-07-05 21:51:17,160 INFO [flow.config] - Loaded control-flow rule: ows.gwc=16
+2020-07-05 21:51:17,165 INFO [flow.config] - Loaded control-flow rule: user.ows.wps.execute=1000/d;30s
+2020-07-05 21:51:17,165 INFO [geoserver.flow] - Control-flow active with 6 flow controllers
+2020-07-05 21:51:17,415 INFO [org.geoserver] - GeoServer configuration lock is enabled
+2020-07-05 21:51:17,489 INFO [org.geoserver] - Loading catalog...
+2020-07-05 21:51:17,568 INFO [org.geoserver] - Loaded style 'point'
+2020-07-05 21:51:17,569 INFO [org.geoserver] - Loaded style 'generic'
+2020-07-05 21:51:17,570 INFO [org.geoserver] - Loaded style 'line'
+2020-07-05 21:51:17,570 INFO [org.geoserver] - Loaded style 'raster'
+2020-07-05 21:51:17,571 INFO [org.geoserver] - Loaded style 'polygon'
+2020-07-05 21:51:17,576 INFO [org.geoserver] - Loaded default workspace agit
+2020-07-05 21:51:17,597 INFO [org.geoserver] - Loaded workspace 'agit'
+2020-07-05 21:51:18,174 INFO [org.geoserver] - Loaded data store 'bev50_backup', enabled
+2020-07-05 21:51:19,235 INFO [org.geoserver] - Loaded feature type 'hoehenprofil_50_backup', enabled
+2020-07-05 21:51:19,248 INFO [org.geoserver] - Loaded layer 'hoehenprofil_50_backup'
+2020-07-05 21:51:19,251 INFO [org.geoserver] - Read catalog in 1.760 s
+2020-07-05 21:51:19,340 INFO [org.geoserver] - Loaded service 'WCSInfoImpl-44ce6eb2:17320f64d2b:-8000', enabled
+2020-07-05 21:51:19,346 INFO [org.geoserver] - Loaded service 'WFSInfoImpl-44ce6eb2:17320f64d2b:-7fff', enabled
+2020-07-05 21:51:19,355 INFO [org.geoserver] - Loaded service 'WMSInfoImpl-44ce6eb2:17320f64d2b:-7ffe', enabled
+2020-07-05 21:51:19,356 INFO [org.geoserver] - Loaded service 'WMTSInfoImpl-44ce6eb2:17320f64d2b:-7ffd', enabled
+2020-07-05 21:51:19,373 INFO [org.geoserver] - Loaded service 'WPSInfoImpl-754f3ae4:1731710132b:-7ff7', enabled
+2020-07-05 21:51:19,399 INFO [config.GeoserverXMLResourceProvider] - Will look for 'geowebcache.xml' in directory '/opt/geoserver/data_dir/gwc'.
+2020-07-05 21:51:19,448 INFO [config.GeoserverXMLResourceProvider] - Found configuration file in /opt/geoserver/data_dir/gwc
+2020-07-05 21:51:19,448 INFO [config.GeoserverXMLResourceProvider] - Found configuration file in /opt/geoserver/data_dir/gwc
+2020-07-05 21:51:19,449 INFO [config.GeoserverXMLResourceProvider] - Found configuration file in /opt/geoserver/data_dir/gwc
+2020-07-05 21:51:19,509 WARN [config.XMLConfiguration] - ********************************************************************************
+2020-07-05 21:51:19,509 WARN [config.XMLConfiguration] - *** GWC configuration validation error: cvc-elt.1.a: Cannot find the declaration of element 'gwcConfiguration'.
+2020-07-05 21:51:19,509 WARN [config.XMLConfiguration] - *** Will try to use configuration anyway. Please check the order of declared elements against the schema.
+2020-07-05 21:51:19,509 WARN [config.XMLConfiguration] - ********************************************************************************
+2020-07-05 21:51:19,550 INFO [config.XMLConfiguration] - Initializing GridSets from /opt/geoserver/data_dir/gwc
+2020-07-05 21:51:19,551 INFO [config.XMLConfiguration] - Initializing layers from /opt/geoserver/data_dir/gwc
+2020-07-05 21:51:19,587 INFO [gwc.layer] - Initializing GWC configuration based on GeoServer's Catalog
+2020-07-05 21:51:19,587 INFO [gwc.layer] - GeoServer TileLayer store base directory is: gwc-layers
+2020-07-05 21:51:19,587 INFO [gwc.layer] - Loading tile layers from gwc-layers
+2020-07-05 21:51:19,620 INFO [gwc.layer] - Loaded 1 tile layers in 31.60 ms
+2020-07-05 21:51:19,634 INFO [storage.BlobStoreAggregator] - BlobStoreConfiguration /opt/geoserver/data_dir/gwc contained no blob store infos.
+2020-07-05 21:51:19,642 INFO [storage.DefaultStorageFinder] - ***********************************************************************************************************************************
+2020-07-05 21:51:19,642 INFO [storage.DefaultStorageFinder] - *** Found System environment variable GEOWEBCACHE_CACHE_DIR set to /opt/geoserver/data_dir/gwc, using it as the default prefix. ***
+2020-07-05 21:51:19,643 INFO [storage.DefaultStorageFinder] - ***********************************************************************************************************************************
+2020-07-05 21:51:19,722 INFO [gwc.config] - Initializing GeoServer specific GWC configuration from gwc-gs.xml
+2020-07-05 21:51:20,259 INFO [config.GeoserverXMLResourceProvider] - Will look for 'geowebcache-diskquota.xml' in directory '/opt/geoserver/data_dir/gwc'.
+2020-07-05 21:51:20,266 INFO [config.GeoserverXMLResourceProvider] - Will look for 'geowebcache-diskquota-jdbc.xml' in directory '/opt/geoserver/data_dir/gwc'.
+2020-07-05 21:51:20,268 INFO [diskquota.ConfigLoader] - DiskQuota configuration is not readable: /opt/geoserver/data_dir/gwc/geowebcache-diskquota.xml
+2020-07-05 21:51:20,275 INFO [diskquota.ConfigLoader] - DiskQuota configuration is not readable: /opt/geoserver/data_dir/gwc/geowebcache-diskquota.xml
+2020-07-05 21:51:20,276 INFO [diskquota.DiskQuotaMonitor] - Setting up disk quota periodic enforcement task
+2020-07-05 21:51:20,276 INFO [diskquota.DiskQuotaMonitor] - 0 layers configured with their own quotas. 
+2020-07-05 21:51:20,277 INFO [diskquota.DiskQuotaMonitor] - 1 layers attached to global quota 500.0 MB
+2020-07-05 21:51:20,306 INFO [diskquota.DiskQuotaMonitor] - Disk quota periodic enforcement task set up every 10 SECONDS
+2020-07-05 21:51:20,964 WARN [gce.imagemosaic] - Unable to set ordering between tiff readers spi
+2020-07-05 21:51:21,082 INFO [geoserver.monitor] - Monitor extension enabled
+2020-07-05 21:51:22,324 WARN [turbojpeg.TurboJPEGMapResponse] - The turbo jpeg encoder is available for usage
+2020-07-05 21:51:23,258 INFO [geowebcache.GeoWebCacheDispatcher] - Invoked setServletPrefix(gwc)
+2020-07-05 21:51:23,267 INFO [georss.GeoRSSPoller] - Initializing GeoRSS poller in a background job...
+2020-07-05 21:51:23,270 INFO [georss.GeoRSSPoller] - No enabled GeoRSS feeds found, poller will not run.
+2020-07-05 21:51:23,318 INFO [wms.WMSService] - Will NOT recombine tiles for non-tiling clients.
+2020-07-05 21:51:23,318 INFO [wms.WMSService] - Will proxy requests to backend that are not getmap or getcapabilities.
+2020-07-05 21:51:23,471 INFO [geoserver.config] - Initiated CatalogTimeStampUpdater
+2020-07-05 21:51:23,612 INFO [geoserver.wps] - Found 5 bindable processes in GeoServer specific processes
+2020-07-05 21:51:23,652 INFO [geoserver.wps] - Found 89 bindable processes in Deprecated processes
+2020-07-05 21:51:23,654 INFO [geoserver.wps] - Blacklisting process ras:ConvolveCoverage as the input kernel of type class javax.media.jai.KernelJAI cannot be handled
+2020-07-05 21:51:23,659 INFO [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the input zones of type class java.lang.Object cannot be handled
+2020-07-05 21:51:23,659 INFO [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the input nodata of type class it.geosolutions.jaiext.range.Range cannot be handled
+2020-07-05 21:51:23,659 INFO [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the input rangeData of type class java.lang.Object cannot be handled
+2020-07-05 21:51:23,660 INFO [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the output zonal statistics of type interface java.util.List cannot be handled
+2020-07-05 21:51:23,660 INFO [geoserver.wps] - Found 18 bindable processes in Raster processes
+2020-07-05 21:51:23,664 INFO [geoserver.wps] - Found 48 bindable processes in Geometry processes
+2020-07-05 21:51:23,664 INFO [geoserver.wps] - Found 1 bindable processes in PolygonLabelProcess
+2020-07-05 21:51:23,670 INFO [geoserver.wps] - Found 31 bindable processes in Vector processes
+2020-07-05 21:51:24,273 WARN [servlet.BaseMapServlet] - Cannot delete file:/usr/local/tomcat/work/Catalina/localhost/geoserver/wicket-filestore
+2020-07-05 21:51:24,406 INFO [geoserver.security] - Start reloading user/groups for service named default
+2020-07-05 21:51:24,409 INFO [geoserver.security] - Reloading user/groups successful for service named default
+2020-07-05 21:51:24,534 INFO [geoserver.security] - AuthenticationCache Initialized with 1000 Max Entries, 300 seconds idle time, 600 seconds time to live and 3 concurrency level
+2020-07-05 21:51:24,535 INFO [geoserver.security] - AuthenticationCache Eviction Task created to run every 600 seconds
+2020-07-05 22:01:34,648 INFO [geoserver.security] - Strong cryptography is available
+2020-07-05 22:01:56,406 INFO [geoserver.wms] - 
+Request: getServiceInfo
+2020-07-05 22:01:56,470 INFO [geoserver.flow] - Request [WMS 1.1.0 GetMap] starting, processing through flow controllers
+2020-07-05 22:01:56,472 INFO [geoserver.flow] - Request control-flow performed, running requests: 1, blocked requests: 0
+2020-07-05 22:01:56,843 INFO [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8088/geoserver/
+	Bbox = SRSEnvelope[107709.54832622746 : 694850.0828413537, 277761.1565844528 : 575885.6025930198]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = PROJCS["MGI / Austria Lambert", 
+  GEOGCS["MGI", 
+    DATUM["Militar-Geographische Institut", 
+      SPHEROID["Bessel 1841", 6377397.155, 299.1528128, AUTHORITY["EPSG","7004"]], 
+      TOWGS84[601.705, 84.263, 485.227, 4.7354, -1.3145, -5.393, -2.3887], 
+      AUTHORITY["EPSG","6312"]], 
+    PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+    UNIT["degree", 0.017453292519943295], 
+    AXIS["Geodetic longitude", EAST], 
+    AXIS["Geodetic latitude", NORTH], 
+    AUTHORITY["EPSG","4312"]], 
+  PROJECTION["Lambert_Conformal_Conic_2SP", AUTHORITY["EPSG","9802"]], 
+  PARAMETER["central_meridian", 13.333333333333336], 
+  PARAMETER["latitude_of_origin", 47.5], 
+  PARAMETER["standard_parallel_1", 48.99999999999999], 
+  PARAMETER["false_easting", 400000.0], 
+  PARAMETER["false_northing", 400000.0], 
+  PARAMETER["scale_factor", 1.0], 
+  PARAMETER["standard_parallel_2", 46.0], 
+  UNIT["m", 1.0], 
+  AXIS["Easting", EAST], 
+  AXIS["Northing", NORTH], 
+  AUTHORITY["EPSG","31287"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = application/openlayers
+	FormatOptions = {}
+	Get = true
+	Height = 389
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@11900022]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {REQUEST=GetMap, SRS=EPSG:31287, FORMAT=application/openlayers, BBOX=107709.54832622746,277761.1565844528,694850.0828413537,575885.6025930198, VERSION=1.1.0, SERVICE=WMS, WIDTH=768, HEIGHT=389, LAYERS=agit:hoehenprofil_50_backup}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:31287
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=point]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = false
+	TilesOrigin = null
+	Time = []
+	Transparent = false
+	ValidateSchema = false
+	Version = 1.1.0
+	ViewParams = null
+	Width = 768
+2020-07-05 22:01:56,865 INFO [geoserver.flow] - releasing flow controllers for [WMS 1.1.0 GetMap]
+2020-07-05 22:01:56,865 INFO [geoserver.flow] - Request completed, running requests: 0, blocked requests: 0
+2020-07-05 22:01:57,157 INFO [geoserver.wms] - 
+Request: getServiceInfo
+2020-07-05 22:01:57,158 INFO [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+2020-07-05 22:01:57,159 INFO [geoserver.flow] - Request control-flow performed, running requests: 1, blocked requests: 0
+2020-07-05 22:01:57,850 INFO [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8088/geoserver/
+	Bbox = SRSEnvelope[-68410.90898373938 : 869795.8427932581, 188740.8113926382 : 663952.304154685]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = PROJCS["MGI / Austria Lambert", 
+  GEOGCS["MGI", 
+    DATUM["Militar-Geographische Institut", 
+      SPHEROID["Bessel 1841", 6377397.155, 299.1528128, AUTHORITY["EPSG","7004"]], 
+      TOWGS84[601.705, 84.263, 485.227, 4.7354, -1.3145, -5.393, -2.3887], 
+      AUTHORITY["EPSG","6312"]], 
+    PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+    UNIT["degree", 0.017453292519943295], 
+    AXIS["Geodetic longitude", EAST], 
+    AXIS["Geodetic latitude", NORTH], 
+    AUTHORITY["EPSG","4312"]], 
+  PROJECTION["Lambert_Conformal_Conic_2SP", AUTHORITY["EPSG","9802"]], 
+  PARAMETER["central_meridian", 13.333333333333336], 
+  PARAMETER["latitude_of_origin", 47.5], 
+  PARAMETER["standard_parallel_1", 48.99999999999999], 
+  PARAMETER["false_easting", 400000.0], 
+  PARAMETER["false_northing", 400000.0], 
+  PARAMETER["scale_factor", 1.0], 
+  PARAMETER["standard_parallel_2", 46.0], 
+  UNIT["m", 1.0], 
+  AXIS["Easting", EAST], 
+  AXIS["Northing", NORTH], 
+  AUTHORITY["EPSG","31287"]]
+	Elevation = []
+	Env = {}
+	Exceptions = application/vnd.ogc.se_inimage
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 389
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@11900022]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {EXCEPTIONS=application/vnd.ogc.se_inimage, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:31287, BBOX=-68410.90898373938,188740.8113926382,869795.8427932581,663952.304154685, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=768, HEIGHT=389, TRANSPARENT=true, LAYERS=agit:hoehenprofil_50_backup}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:31287
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=point]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = false
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 768
+2020-07-05 22:01:57,920 INFO [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+2020-07-05 22:01:57,920 INFO [geoserver.flow] - Request completed, running requests: 0, blocked requests: 0
+2020-07-05 22:01:59,703 INFO [geoserver.wms] - 
+Request: getServiceInfo
+2020-07-05 22:01:59,705 INFO [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+2020-07-05 22:01:59,705 INFO [geoserver.flow] - Request control-flow performed, running requests: 1, blocked requests: 0
+2020-07-05 22:01:59,918 INFO [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8088/geoserver/
+	Bbox = SRSEnvelope[543622.4017457863 : 558281.8822423018, 479439.454910456 : 486864.63448486297]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = PROJCS["MGI / Austria Lambert", 
+  GEOGCS["MGI", 
+    DATUM["Militar-Geographische Institut", 
+      SPHEROID["Bessel 1841", 6377397.155, 299.1528128, AUTHORITY["EPSG","7004"]], 
+      TOWGS84[601.705, 84.263, 485.227, 4.7354, -1.3145, -5.393, -2.3887], 
+      AUTHORITY["EPSG","6312"]], 
+    PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+    UNIT["degree", 0.017453292519943295], 
+    AXIS["Geodetic longitude", EAST], 
+    AXIS["Geodetic latitude", NORTH], 
+    AUTHORITY["EPSG","4312"]], 
+  PROJECTION["Lambert_Conformal_Conic_2SP", AUTHORITY["EPSG","9802"]], 
+  PARAMETER["central_meridian", 13.333333333333336], 
+  PARAMETER["latitude_of_origin", 47.5], 
+  PARAMETER["standard_parallel_1", 48.99999999999999], 
+  PARAMETER["false_easting", 400000.0], 
+  PARAMETER["false_northing", 400000.0], 
+  PARAMETER["scale_factor", 1.0], 
+  PARAMETER["standard_parallel_2", 46.0], 
+  UNIT["m", 1.0], 
+  AXIS["Easting", EAST], 
+  AXIS["Northing", NORTH], 
+  AUTHORITY["EPSG","31287"]]
+	Elevation = []
+	Env = {}
+	Exceptions = application/vnd.ogc.se_inimage
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 389
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@11900022]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {EXCEPTIONS=application/vnd.ogc.se_inimage, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:31287, BBOX=543622.4017457863,479439.454910456,558281.8822423018,486864.63448486297, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=768, HEIGHT=389, TRANSPARENT=true, LAYERS=agit:hoehenprofil_50_backup}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:31287
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=point]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = false
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 768
+2020-07-05 22:01:59,934 INFO [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+2020-07-05 22:01:59,934 INFO [geoserver.flow] - Request completed, running requests: 0, blocked requests: 0
+2020-07-05 22:02:01,231 INFO [geoserver.wms] - 
+Request: getServiceInfo
+2020-07-05 22:02:01,233 INFO [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+2020-07-05 22:02:01,233 INFO [geoserver.flow] - Request control-flow performed, running requests: 1, blocked requests: 0
+2020-07-05 22:02:01,461 INFO [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8088/geoserver/
+	Bbox = SRSEnvelope[548384.8241206309 : 550217.2591826954, 482248.9500739728 : 483177.09752077365]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = PROJCS["MGI / Austria Lambert", 
+  GEOGCS["MGI", 
+    DATUM["Militar-Geographische Institut", 
+      SPHEROID["Bessel 1841", 6377397.155, 299.1528128, AUTHORITY["EPSG","7004"]], 
+      TOWGS84[601.705, 84.263, 485.227, 4.7354, -1.3145, -5.393, -2.3887], 
+      AUTHORITY["EPSG","6312"]], 
+    PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+    UNIT["degree", 0.017453292519943295], 
+    AXIS["Geodetic longitude", EAST], 
+    AXIS["Geodetic latitude", NORTH], 
+    AUTHORITY["EPSG","4312"]], 
+  PROJECTION["Lambert_Conformal_Conic_2SP", AUTHORITY["EPSG","9802"]], 
+  PARAMETER["central_meridian", 13.333333333333336], 
+  PARAMETER["latitude_of_origin", 47.5], 
+  PARAMETER["standard_parallel_1", 48.99999999999999], 
+  PARAMETER["false_easting", 400000.0], 
+  PARAMETER["false_northing", 400000.0], 
+  PARAMETER["scale_factor", 1.0], 
+  PARAMETER["standard_parallel_2", 46.0], 
+  UNIT["m", 1.0], 
+  AXIS["Easting", EAST], 
+  AXIS["Northing", NORTH], 
+  AUTHORITY["EPSG","31287"]]
+	Elevation = []
+	Env = {}
+	Exceptions = application/vnd.ogc.se_inimage
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 389
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@11900022]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {EXCEPTIONS=application/vnd.ogc.se_inimage, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:31287, BBOX=548384.8241206309,482248.9500739728,550217.2591826954,483177.09752077365, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=769, HEIGHT=389, TRANSPARENT=true, LAYERS=agit:hoehenprofil_50_backup}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:31287
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=point]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = false
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 769
+2020-07-05 22:02:01,472 INFO [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+2020-07-05 22:02:01,472 INFO [geoserver.flow] - Request completed, running requests: 0, blocked requests: 0
+2020-07-05 22:02:02,407 INFO [geoserver.wms] - 
+Request: getServiceInfo
+2020-07-05 22:02:02,409 INFO [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+2020-07-05 22:02:02,410 INFO [geoserver.flow] - Request control-flow performed, running requests: 1, blocked requests: 0
+2020-07-05 22:02:02,613 INFO [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8088/geoserver/
+	Bbox = SRSEnvelope[548768.9674083814 : 549685.1849394136, 482485.7589019805 : 482949.83262538095]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = PROJCS["MGI / Austria Lambert", 
+  GEOGCS["MGI", 
+    DATUM["Militar-Geographische Institut", 
+      SPHEROID["Bessel 1841", 6377397.155, 299.1528128, AUTHORITY["EPSG","7004"]], 
+      TOWGS84[601.705, 84.263, 485.227, 4.7354, -1.3145, -5.393, -2.3887], 
+      AUTHORITY["EPSG","6312"]], 
+    PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+    UNIT["degree", 0.017453292519943295], 
+    AXIS["Geodetic longitude", EAST], 
+    AXIS["Geodetic latitude", NORTH], 
+    AUTHORITY["EPSG","4312"]], 
+  PROJECTION["Lambert_Conformal_Conic_2SP", AUTHORITY["EPSG","9802"]], 
+  PARAMETER["central_meridian", 13.333333333333336], 
+  PARAMETER["latitude_of_origin", 47.5], 
+  PARAMETER["standard_parallel_1", 48.99999999999999], 
+  PARAMETER["false_easting", 400000.0], 
+  PARAMETER["false_northing", 400000.0], 
+  PARAMETER["scale_factor", 1.0], 
+  PARAMETER["standard_parallel_2", 46.0], 
+  UNIT["m", 1.0], 
+  AXIS["Easting", EAST], 
+  AXIS["Northing", NORTH], 
+  AUTHORITY["EPSG","31287"]]
+	Elevation = []
+	Env = {}
+	Exceptions = application/vnd.ogc.se_inimage
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 390
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@11900022]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {EXCEPTIONS=application/vnd.ogc.se_inimage, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:31287, BBOX=548768.9674083814,482485.7589019805,549685.1849394136,482949.83262538095, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=768, HEIGHT=390, TRANSPARENT=true, LAYERS=agit:hoehenprofil_50_backup}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:31287
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=point]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = false
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 768
+2020-07-05 22:02:02,621 INFO [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+2020-07-05 22:02:02,622 INFO [geoserver.flow] - Request completed, running requests: 0, blocked requests: 0
+2020-07-05 22:02:03,499 INFO [geoserver.wms] - 
+Request: getServiceInfo
+2020-07-05 22:02:03,505 INFO [geoserver.flow] - Request [WMS 1.1.1 GetFeatureInfo] starting, processing through flow controllers
+2020-07-05 22:02:03,505 INFO [geoserver.flow] - Request control-flow performed, running requests: 1, blocked requests: 0
+2020-07-05 22:02:03,791 INFO [geoserver.wms] - 
+Request: getFeatureInfo
+	BaseUrl = http://localhost:8088/geoserver/
+	Exceptions = application/vnd.ogc.se_inimage
+	ExcludeNodataResults = false
+	FeatureCount = 50
+	Get = false
+	GetMapRequest = 
+GetMap Request
+ version: 1.1.1
+ output format: image/png
+ width height: 101,101
+ bbox: SRSEnvelope[549123.8824024987 : 549244.3745517621, 482661.725159568 : 482782.2173088314]
+ layers: agit:hoehenprofil_50_backup
+ styles: point
+	InfoFormat = text/html
+	PropertyNames = null
+	QueryLayers = [org.geoserver.wms.MapLayerInfo@11900022]
+	RawKvp = {FORMAT=image/png, INFO_FORMAT=text/html, STYLES=, WIDTH=101, HEIGHT=101, LAYERS=agit:hoehenprofil_50_backup, EXCEPTIONS=application/vnd.ogc.se_inimage, REQUEST=GetFeatureInfo, SRS=EPSG:31287, BBOX=549123.8824024987,482661.725159568,549244.3745517621,482782.2173088314, VERSION=1.1.1, X=50, Y=50, SERVICE=WMS, QUERY_LAYERS=agit:hoehenprofil_50_backup, TRANSPARENT=true, FEATURE_COUNT=50}
+	Request = GetFeatureInfo
+	RequestCharset = null
+	Version = 1.1.1
+	XPixel = 50
+	YPixel = 50
+2020-07-05 22:02:03,853 INFO [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetFeatureInfo]
+2020-07-05 22:02:03,853 INFO [geoserver.flow] - Request completed, running requests: 0, blocked requests: 0
+2020-07-05 22:13:58,437 INFO [georss.GeoRSSPoller] - destroy() invoked
+2020-07-05 22:13:58,438 INFO [geowebcache.GeoWebCacheDispatcher] - GeoWebCacheDispatcher.destroy() was invoked, shutting down.
+2020-07-05 22:13:58,562 INFO [diskquota.DiskQuotaMonitor] - Disk quota monitor shutting down...
+2020-07-05 22:13:58,563 INFO [diskquota.DiskQuotaMonitor] - Shutting down quota usage monitor...
+2020-07-05 22:13:58,563 INFO [diskquota.QuotaUpdatesMonitor] - Shutting down quota usage monitor...
+2020-07-05 22:13:58,566 INFO [diskquota.DiskQuotaMonitor] - Shutting down quota statistics gathering monitor...
+2020-07-05 22:13:58,566 INFO [diskquota.QueuedQuotaUpdatesConsumer] - Shutting down quota update background task due to InterruptedException
+2020-07-05 22:13:58,571 INFO [diskquota.QueuedUsageStatsConsumer] - Shutting down quota update background task due to interrupted exception
+2020-07-05 22:13:58,572 INFO [seed.SeederThreadPoolExecutor] - Initiating shut down for running and pending seed tasks...
+2020-07-05 22:13:58,572 INFO [seed.SeederThreadPoolExecutor] - Seeder thread pool executor shut down complete.
+2020-07-05 22:13:58,572 INFO [storage.DefaultStorageBroker] - Destroying StorageBroker
+2020-07-05 22:13:58,583 WARN [support.DisposableBeanAdapter] - Destroy method 'destroy' on bean with name 'gwcMemoryBlobStore' threw an exception: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@741090f2[Not completed, task = org.geowebcache.storage.blobstore.memory.MemoryBlobStore$BlobStoreTask@54b9490f] rejected from java.util.concurrent.ThreadPoolExecutor@4f812042[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 1]
+2020-07-05 22:13:58,585 WARN [support.DisposableBeanAdapter] - Invocation of destroy method failed on bean with name 'geoServerLoader': org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'wmsLifecycleHandler': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+2020-07-06 09:18:18,782 INFO [geoserver.logging] - Suppressing StdOut logging.  If you want to see GeoServer logs, be sure to look in '/opt/geoserver/data_dir/logs/geoserver.log'
+2020-07-06 09:18:21,013 WARN [geoserver.monitor] - monitoring storage memory not found, falling back to 'memory'
+2020-07-06 09:18:21,305 INFO [flow.config] - Loaded control-flow rule: ows.global=100
+2020-07-06 09:18:21,305 INFO [flow.config] - Loaded control-flow rule: ows.wms.getmap=10
+2020-07-06 09:18:21,305 INFO [flow.config] - Loaded control-flow rule: ows.wfs.getfeature.application/msexcel=4
+2020-07-06 09:18:21,307 INFO [flow.config] - Loaded control-flow rule: user=6
+2020-07-06 09:18:21,307 INFO [flow.config] - Loaded control-flow rule: ows.gwc=16
+2020-07-06 09:18:21,311 INFO [flow.config] - Loaded control-flow rule: user.ows.wps.execute=1000/d;30s
+2020-07-06 09:18:21,312 INFO [geoserver.flow] - Control-flow active with 6 flow controllers
+2020-07-06 09:18:21,557 INFO [org.geoserver] - GeoServer configuration lock is enabled
+2020-07-06 09:18:21,622 INFO [org.geoserver] - Loading catalog...
+2020-07-06 09:18:21,687 INFO [org.geoserver] - Loaded style 'point'
+2020-07-06 09:18:21,688 INFO [org.geoserver] - Loaded style 'line'
+2020-07-06 09:18:21,689 INFO [org.geoserver] - Loaded style 'raster'
+2020-07-06 09:18:21,689 INFO [org.geoserver] - Loaded style 'generic'
+2020-07-06 09:18:21,690 INFO [org.geoserver] - Loaded style 'polygon'
+2020-07-06 09:18:21,694 INFO [org.geoserver] - Loaded default workspace agit
+2020-07-06 09:18:21,706 INFO [org.geoserver] - Loaded workspace 'agit'
+2020-07-06 09:18:22,261 INFO [org.geoserver] - Loaded data store 'bev50_backup', enabled
+2020-07-06 09:18:23,347 INFO [org.geoserver] - Loaded feature type 'hoehenprofil_50_backup', enabled
+2020-07-06 09:18:23,361 INFO [org.geoserver] - Loaded layer 'hoehenprofil_50_backup'
+2020-07-06 09:18:23,365 INFO [org.geoserver] - Read catalog in 1.740 s
+2020-07-06 09:18:23,462 INFO [org.geoserver] - Loaded service 'WCSInfoImpl--2a1c9c6b:173236b54e6:-8000', enabled
+2020-07-06 09:18:23,469 INFO [org.geoserver] - Loaded service 'WFSInfoImpl--2a1c9c6b:173236b54e6:-7fff', enabled
+2020-07-06 09:18:23,478 INFO [org.geoserver] - Loaded service 'WMSInfoImpl--2a1c9c6b:173236b54e6:-7ffe', enabled
+2020-07-06 09:18:23,479 INFO [org.geoserver] - Loaded service 'WMTSInfoImpl--2a1c9c6b:173236b54e6:-7ffd', enabled
+2020-07-06 09:18:23,494 INFO [org.geoserver] - Loaded service 'WPSInfoImpl-754f3ae4:1731710132b:-7ff7', enabled
+2020-07-06 09:18:23,523 INFO [config.GeoserverXMLResourceProvider] - Will look for 'geowebcache.xml' in directory '/opt/geoserver/data_dir/gwc'.
+2020-07-06 09:18:23,574 INFO [config.GeoserverXMLResourceProvider] - Found configuration file in /opt/geoserver/data_dir/gwc
+2020-07-06 09:18:23,574 INFO [config.GeoserverXMLResourceProvider] - Found configuration file in /opt/geoserver/data_dir/gwc
+2020-07-06 09:18:23,574 INFO [config.GeoserverXMLResourceProvider] - Found configuration file in /opt/geoserver/data_dir/gwc
+2020-07-06 09:18:23,639 WARN [config.XMLConfiguration] - ********************************************************************************
+2020-07-06 09:18:23,640 WARN [config.XMLConfiguration] - *** GWC configuration validation error: cvc-elt.1.a: Cannot find the declaration of element 'gwcConfiguration'.
+2020-07-06 09:18:23,640 WARN [config.XMLConfiguration] - *** Will try to use configuration anyway. Please check the order of declared elements against the schema.
+2020-07-06 09:18:23,640 WARN [config.XMLConfiguration] - ********************************************************************************
+2020-07-06 09:18:23,687 INFO [config.XMLConfiguration] - Initializing GridSets from /opt/geoserver/data_dir/gwc
+2020-07-06 09:18:23,688 INFO [config.XMLConfiguration] - Initializing layers from /opt/geoserver/data_dir/gwc
+2020-07-06 09:18:23,729 INFO [gwc.layer] - Initializing GWC configuration based on GeoServer's Catalog
+2020-07-06 09:18:23,729 INFO [gwc.layer] - GeoServer TileLayer store base directory is: gwc-layers
+2020-07-06 09:18:23,729 INFO [gwc.layer] - Loading tile layers from gwc-layers
+2020-07-06 09:18:23,760 INFO [gwc.layer] - Loaded 1 tile layers in 30.65 ms
+2020-07-06 09:18:23,778 INFO [storage.BlobStoreAggregator] - BlobStoreConfiguration /opt/geoserver/data_dir/gwc contained no blob store infos.
+2020-07-06 09:18:23,789 INFO [storage.DefaultStorageFinder] - ***********************************************************************************************************************************
+2020-07-06 09:18:23,789 INFO [storage.DefaultStorageFinder] - *** Found System environment variable GEOWEBCACHE_CACHE_DIR set to /opt/geoserver/data_dir/gwc, using it as the default prefix. ***
+2020-07-06 09:18:23,789 INFO [storage.DefaultStorageFinder] - ***********************************************************************************************************************************
+2020-07-06 09:18:23,906 INFO [gwc.config] - Initializing GeoServer specific GWC configuration from gwc-gs.xml
+2020-07-06 09:18:24,436 INFO [config.GeoserverXMLResourceProvider] - Will look for 'geowebcache-diskquota.xml' in directory '/opt/geoserver/data_dir/gwc'.
+2020-07-06 09:18:24,446 INFO [config.GeoserverXMLResourceProvider] - Will look for 'geowebcache-diskquota-jdbc.xml' in directory '/opt/geoserver/data_dir/gwc'.
+2020-07-06 09:18:24,448 INFO [diskquota.ConfigLoader] - DiskQuota configuration is not readable: /opt/geoserver/data_dir/gwc/geowebcache-diskquota.xml
+2020-07-06 09:18:24,456 INFO [diskquota.ConfigLoader] - DiskQuota configuration is not readable: /opt/geoserver/data_dir/gwc/geowebcache-diskquota.xml
+2020-07-06 09:18:24,458 INFO [diskquota.DiskQuotaMonitor] - Setting up disk quota periodic enforcement task
+2020-07-06 09:18:24,458 INFO [diskquota.DiskQuotaMonitor] - 0 layers configured with their own quotas. 
+2020-07-06 09:18:24,458 INFO [diskquota.DiskQuotaMonitor] - 1 layers attached to global quota 500.0 MB
+2020-07-06 09:18:24,489 INFO [diskquota.DiskQuotaMonitor] - Disk quota periodic enforcement task set up every 10 SECONDS
+2020-07-06 09:18:25,270 WARN [gce.imagemosaic] - Unable to set ordering between tiff readers spi
+2020-07-06 09:18:25,352 INFO [geoserver.monitor] - Monitor extension enabled
+2020-07-06 09:18:26,828 WARN [turbojpeg.TurboJPEGMapResponse] - The turbo jpeg encoder is available for usage
+2020-07-06 09:18:27,852 INFO [geowebcache.GeoWebCacheDispatcher] - Invoked setServletPrefix(gwc)
+2020-07-06 09:18:27,864 INFO [georss.GeoRSSPoller] - Initializing GeoRSS poller in a background job...
+2020-07-06 09:18:27,867 INFO [georss.GeoRSSPoller] - No enabled GeoRSS feeds found, poller will not run.
+2020-07-06 09:18:27,922 INFO [wms.WMSService] - Will NOT recombine tiles for non-tiling clients.
+2020-07-06 09:18:27,923 INFO [wms.WMSService] - Will proxy requests to backend that are not getmap or getcapabilities.
+2020-07-06 09:18:28,105 INFO [geoserver.config] - Initiated CatalogTimeStampUpdater
+2020-07-06 09:18:28,274 INFO [geoserver.wps] - Found 5 bindable processes in GeoServer specific processes
+2020-07-06 09:18:28,315 INFO [geoserver.wps] - Found 89 bindable processes in Deprecated processes
+2020-07-06 09:18:28,317 INFO [geoserver.wps] - Blacklisting process ras:ConvolveCoverage as the input kernel of type class javax.media.jai.KernelJAI cannot be handled
+2020-07-06 09:18:28,321 INFO [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the input zones of type class java.lang.Object cannot be handled
+2020-07-06 09:18:28,322 INFO [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the input nodata of type class it.geosolutions.jaiext.range.Range cannot be handled
+2020-07-06 09:18:28,322 INFO [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the input rangeData of type class java.lang.Object cannot be handled
+2020-07-06 09:18:28,322 INFO [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the output zonal statistics of type interface java.util.List cannot be handled
+2020-07-06 09:18:28,322 INFO [geoserver.wps] - Found 18 bindable processes in Raster processes
+2020-07-06 09:18:28,326 INFO [geoserver.wps] - Found 48 bindable processes in Geometry processes
+2020-07-06 09:18:28,326 INFO [geoserver.wps] - Found 1 bindable processes in PolygonLabelProcess
+2020-07-06 09:18:28,332 INFO [geoserver.wps] - Found 31 bindable processes in Vector processes
+2020-07-06 09:18:28,996 WARN [servlet.BaseMapServlet] - Cannot delete file:/usr/local/tomcat/work/Catalina/localhost/geoserver/wicket-filestore
+2020-07-06 09:18:29,149 INFO [geoserver.security] - Start reloading user/groups for service named default
+2020-07-06 09:18:29,152 INFO [geoserver.security] - Reloading user/groups successful for service named default
+2020-07-06 09:18:29,285 INFO [geoserver.security] - AuthenticationCache Initialized with 1000 Max Entries, 300 seconds idle time, 600 seconds time to live and 3 concurrency level
+2020-07-06 09:18:29,286 INFO [geoserver.security] - AuthenticationCache Eviction Task created to run every 600 seconds
+2020-07-06 09:18:49,379 INFO [geoserver.wfs] - 
+Request: getServiceInfo
+2020-07-06 09:18:49,718 INFO [geoserver.flow] - Request [wfs 1.0.0 GetFeature] starting, processing through flow controllers
+2020-07-06 09:18:49,720 INFO [geoserver.flow] - Request control-flow performed, running requests: 1, blocked requests: 0
+2020-07-06 09:18:50,281 INFO [geoserver.wfs] - 
+Request: getFeature
+    service = wfs
+    version = 1.0.0
+    baseUrl = http://localhost:8088/geoserver/
+    query[0]:
+        srsName = EPSG:4326
+        typeName[0] = {agit}hoehenprofil_50_backup
+    outputFormat = application/json
+    resultType = results
+    viewParams[0] = {HP_DETAIL=50, HP_LINE=11.097908020019533 47.20149345746034bs 11.126060485839846 47.20172671804105bs 11.145286560058596 47.199044159443524bs 11.154899597167969 47.194845099780174, HP_SRID=4326}
+2020-07-06 09:18:50,309 INFO [wfs.json] - about to encode JSON
+2020-07-06 09:18:51,370 INFO [geoserver.flow] - releasing flow controllers for [wfs 1.0.0 GetFeature]
+2020-07-06 09:18:51,370 INFO [geoserver.flow] - Request completed, running requests: 0, blocked requests: 0
+2020-07-06 09:19:20,399 INFO [geoserver.wfs] - 
+Request: getServiceInfo
+2020-07-06 09:19:20,401 INFO [geoserver.flow] - Request [wfs 1.0.0 GetFeature] starting, processing through flow controllers
+2020-07-06 09:19:20,401 INFO [geoserver.flow] - Request control-flow performed, running requests: 1, blocked requests: 0
+2020-07-06 09:19:20,406 INFO [geoserver.wfs] - 
+Request: getFeature
+    service = wfs
+    version = 1.0.0
+    baseUrl = http://localhost:8088/geoserver/
+    query[0]:
+        srsName = EPSG:4326
+        typeName[0] = {agit}hoehenprofil_50_backup
+    outputFormat = application/json
+    resultType = results
+    viewParams[0] = {HP_DETAIL=50, HP_LINE=11.141842369952158 47.202193236125716bs 11.172219577226173 47.19006243265946bs 11.226795576735334 47.19682803047388, HP_SRID=4326}
+2020-07-06 09:19:20,408 INFO [wfs.json] - about to encode JSON
+2020-07-06 09:19:21,004 INFO [geoserver.flow] - releasing flow controllers for [wfs 1.0.0 GetFeature]
+2020-07-06 09:19:21,004 INFO [geoserver.flow] - Request completed, running requests: 0, blocked requests: 0
+2020-07-06 09:19:39,279 INFO [geoserver.wfs] - 
+Request: getServiceInfo
+2020-07-06 09:19:39,280 INFO [geoserver.flow] - Request [wfs 1.0.0 GetFeature] starting, processing through flow controllers
+2020-07-06 09:19:39,281 INFO [geoserver.flow] - Request control-flow performed, running requests: 1, blocked requests: 0
+2020-07-06 09:19:39,285 INFO [geoserver.wfs] - 
+Request: getFeature
+    service = wfs
+    version = 1.0.0
+    baseUrl = http://localhost:8088/geoserver/
+    query[0]:
+        srsName = EPSG:4326
+        typeName[0] = {agit}hoehenprofil_50_backup
+    outputFormat = application/json
+    resultType = results
+    viewParams[0] = {HP_DETAIL=50, HP_LINE=11.14647627974668 47.194961744813355bs 11.165354749856736 47.184812667729354, HP_SRID=4326}
+2020-07-06 09:19:39,286 INFO [wfs.json] - about to encode JSON
+2020-07-06 09:19:39,779 INFO [geoserver.flow] - releasing flow controllers for [wfs 1.0.0 GetFeature]
+2020-07-06 09:19:39,779 INFO [geoserver.flow] - Request completed, running requests: 0, blocked requests: 0
+2020-07-06 09:20:13,105 INFO [geoserver.wfs] - 
+Request: getServiceInfo
+2020-07-06 09:20:13,106 INFO [geoserver.flow] - Request [wfs 1.0.0 GetFeature] starting, processing through flow controllers
+2020-07-06 09:20:13,106 INFO [geoserver.flow] - Request control-flow performed, running requests: 1, blocked requests: 0
+2020-07-06 09:20:13,109 INFO [geoserver.wfs] - 
+Request: getFeature
+    service = wfs
+    version = 1.0.0
+    baseUrl = http://localhost:8088/geoserver/
+    query[0]:
+        srsName = EPSG:4326
+        typeName[0] = {agit}hoehenprofil_50_backup
+    outputFormat = application/json
+    resultType = results
+    viewParams[0] = {HP_DETAIL=5000, HP_LINE=10.456817231049628 47.05515408550348bs 17.134990221254412 48.004625021133904, HP_SRID=4326}
+2020-07-06 09:20:13,110 INFO [wfs.json] - about to encode JSON
+2020-07-06 09:20:13,699 INFO [geoserver.flow] - releasing flow controllers for [wfs 1.0.0 GetFeature]
+2020-07-06 09:20:13,699 INFO [geoserver.flow] - Request completed, running requests: 0, blocked requests: 0
+2020-07-06 09:20:42,306 INFO [geoserver.wfs] - 
+Request: getServiceInfo
+2020-07-06 09:20:42,307 INFO [geoserver.flow] - Request [wfs 1.0.0 GetFeature] starting, processing through flow controllers
+2020-07-06 09:20:42,307 INFO [geoserver.flow] - Request control-flow performed, running requests: 1, blocked requests: 0
+2020-07-06 09:20:42,310 INFO [geoserver.wfs] - 
+Request: getFeature
+    service = wfs
+    version = 1.0.0
+    baseUrl = http://localhost:8088/geoserver/
+    query[0]:
+        srsName = EPSG:4326
+        typeName[0] = {agit}hoehenprofil_50_backup
+    outputFormat = application/json
+    resultType = results
+    viewParams[0] = {HP_DETAIL=500, HP_LINE=10.079600294197633 47.18224592701491bs 15.137662739275305 47.42437092240519, HP_SRID=4326}
+2020-07-06 09:20:42,311 INFO [wfs.json] - about to encode JSON
+2020-07-06 09:20:43,037 INFO [geoserver.flow] - releasing flow controllers for [wfs 1.0.0 GetFeature]
+2020-07-06 09:20:43,037 INFO [geoserver.flow] - Request completed, running requests: 0, blocked requests: 0
+2020-07-06 09:20:47,579 INFO [geoserver.wfs] - 
+Request: getServiceInfo
+2020-07-06 09:20:47,579 INFO [geoserver.flow] - Request [wfs 1.0.0 GetFeature] starting, processing through flow controllers
+2020-07-06 09:20:47,579 INFO [geoserver.flow] - Request control-flow performed, running requests: 1, blocked requests: 0
+2020-07-06 09:20:47,582 INFO [geoserver.wfs] - 
+Request: getFeature
+    service = wfs
+    version = 1.0.0
+    baseUrl = http://localhost:8088/geoserver/
+    query[0]:
+        srsName = EPSG:4326
+        typeName[0] = {agit}hoehenprofil_50_backup
+    outputFormat = application/json
+    resultType = results
+    viewParams[0] = {HP_DETAIL=500, HP_LINE=12.732199817512013 47.73932336136857bs 13.550496564869825 47.60245929546312, HP_SRID=4326}
+2020-07-06 09:20:47,584 INFO [wfs.json] - about to encode JSON
+2020-07-06 09:20:48,130 INFO [geoserver.flow] - releasing flow controllers for [wfs 1.0.0 GetFeature]
+2020-07-06 09:20:48,130 INFO [geoserver.flow] - Request completed, running requests: 0, blocked requests: 0
+2020-07-06 09:20:55,877 INFO [geoserver.wfs] - 
+Request: getServiceInfo
+2020-07-06 09:20:55,878 INFO [geoserver.flow] - Request [wfs 1.0.0 GetFeature] starting, processing through flow controllers
+2020-07-06 09:20:55,878 INFO [geoserver.flow] - Request control-flow performed, running requests: 1, blocked requests: 0
+2020-07-06 09:20:55,883 INFO [geoserver.wfs] - 
+Request: getFeature
+    service = wfs
+    version = 1.0.0
+    baseUrl = http://localhost:8088/geoserver/
+    query[0]:
+        srsName = EPSG:4326
+        typeName[0] = {agit}hoehenprofil_50_backup
+    outputFormat = application/json
+    resultType = results
+    viewParams[0] = {HP_DETAIL=50, HP_LINE=14.470008109209779 47.30624071962561bs 14.415088923435047 47.29320230289773, HP_SRID=4326}
+2020-07-06 09:20:55,884 INFO [wfs.json] - about to encode JSON
+2020-07-06 09:20:56,402 INFO [geoserver.flow] - releasing flow controllers for [wfs 1.0.0 GetFeature]
+2020-07-06 09:20:56,402 INFO [geoserver.flow] - Request completed, running requests: 0, blocked requests: 0
+2020-07-06 09:22:35,757 INFO [geoserver.wfs] - 
+Request: getServiceInfo
+2020-07-06 09:22:35,758 INFO [geoserver.flow] - Request [wfs 1.0.0 GetFeature] starting, processing through flow controllers
+2020-07-06 09:22:35,758 INFO [geoserver.flow] - Request control-flow performed, running requests: 1, blocked requests: 0
+2020-07-06 09:22:35,761 INFO [geoserver.wfs] - 
+Request: getFeature
+    service = wfs
+    version = 1.0.0
+    baseUrl = http://localhost:8088/geoserver/
+    query[0]:
+        srsName = EPSG:4326
+        typeName[0] = {agit}hoehenprofil_50_backup
+    outputFormat = application/json
+    resultType = results
+    viewParams[0] = {HP_DETAIL=50, HP_LINE=11.162608709388039 47.196011538573956bs 11.169645237626678 47.185162668211504bs 11.188352105382965 47.18854588723391, HP_SRID=4326}
+2020-07-06 09:22:35,762 INFO [wfs.json] - about to encode JSON
+2020-07-06 09:22:36,290 INFO [geoserver.flow] - releasing flow controllers for [wfs 1.0.0 GetFeature]
+2020-07-06 09:22:36,290 INFO [geoserver.flow] - Request completed, running requests: 0, blocked requests: 0
+2020-07-06 09:22:57,091 INFO [geoserver.wfs] - 
+Request: getServiceInfo
+2020-07-06 09:22:57,092 INFO [geoserver.flow] - Request [wfs 1.0.0 GetFeature] starting, processing through flow controllers
+2020-07-06 09:22:57,092 INFO [geoserver.flow] - Request control-flow performed, running requests: 1, blocked requests: 0
+2020-07-06 09:22:57,095 INFO [geoserver.wfs] - 
+Request: getFeature
+    service = wfs
+    version = 1.0.0
+    baseUrl = http://localhost:8088/geoserver/
+    query[0]:
+        srsName = EPSG:4326
+        typeName[0] = {agit}hoehenprofil_50_backup
+    outputFormat = application/json
+    resultType = results
+    viewParams[0] = {HP_DETAIL=50, HP_LINE=11.181067904905168 47.20318457343473bs 11.183213187904732 47.20411757986243bs 11.182440886024883 47.20201829232471bs 11.183813867144599 47.19898584144594bs 11.184843602984397 47.198169382749455bs 11.184843602984397 47.19618650218157bs 11.185959150144203 47.195603287912675bs 11.185959150144203 47.19344533938292bs 11.188190244463739 47.191812238921315bs 11.189048357663596 47.18854588723391, HP_SRID=4326}
+2020-07-06 09:22:57,096 INFO [wfs.json] - about to encode JSON
+2020-07-06 09:22:57,612 INFO [geoserver.flow] - releasing flow controllers for [wfs 1.0.0 GetFeature]
+2020-07-06 09:22:57,613 INFO [geoserver.flow] - Request completed, running requests: 0, blocked requests: 0
+2020-07-06 09:23:11,917 INFO [geoserver.wfs] - 
+Request: getServiceInfo
+2020-07-06 09:23:11,918 INFO [geoserver.flow] - Request [wfs 1.0.0 GetFeature] starting, processing through flow controllers
+2020-07-06 09:23:11,918 INFO [geoserver.flow] - Request control-flow performed, running requests: 1, blocked requests: 0
+2020-07-06 09:23:11,920 INFO [geoserver.wfs] - 
+Request: getFeature
+    service = wfs
+    version = 1.0.0
+    baseUrl = http://localhost:8088/geoserver/
+    query[0]:
+        srsName = EPSG:4326
+        typeName[0] = {agit}hoehenprofil_50_backup
+    outputFormat = application/json
+    resultType = results
+    viewParams[0] = {HP_DETAIL=50, HP_LINE=11.28011523657704 47.193095393514625bs 11.292042997237488 47.196303144266174, HP_SRID=4326}
+2020-07-06 09:23:11,921 INFO [wfs.json] - about to encode JSON
+2020-07-06 09:23:12,454 INFO [geoserver.flow] - releasing flow controllers for [wfs 1.0.0 GetFeature]
+2020-07-06 09:23:12,454 INFO [geoserver.flow] - Request completed, running requests: 0, blocked requests: 0
+2020-07-06 09:23:16,998 INFO [geoserver.wfs] - 
+Request: getServiceInfo
+2020-07-06 09:23:16,999 INFO [geoserver.flow] - Request [wfs 1.0.0 GetFeature] starting, processing through flow controllers
+2020-07-06 09:23:16,999 INFO [geoserver.flow] - Request control-flow performed, running requests: 1, blocked requests: 0
+2020-07-06 09:23:17,004 INFO [geoserver.wfs] - 
+Request: getFeature
+    service = wfs
+    version = 1.0.0
+    baseUrl = http://localhost:8088/geoserver/
+    query[0]:
+        srsName = EPSG:4326
+        typeName[0] = {agit}hoehenprofil_50_backup
+    outputFormat = application/json
+    resultType = results
+    viewParams[0] = {HP_DETAIL=50, HP_LINE=11.302254533342467 47.19542832238204bs 11.283547685687939 47.188370898434876, HP_SRID=4326}
+2020-07-06 09:23:17,006 INFO [wfs.json] - about to encode JSON
+2020-07-06 09:23:17,518 INFO [geoserver.flow] - releasing flow controllers for [wfs 1.0.0 GetFeature]
+2020-07-06 09:23:17,518 INFO [geoserver.flow] - Request completed, running requests: 0, blocked requests: 0
+2020-07-06 09:23:35,551 INFO [geoserver.wfs] - 
+Request: getServiceInfo
+2020-07-06 09:23:35,552 INFO [geoserver.flow] - Request [wfs 1.0.0 GetFeature] starting, processing through flow controllers
+2020-07-06 09:23:35,552 INFO [geoserver.flow] - Request control-flow performed, running requests: 1, blocked requests: 0
+2020-07-06 09:23:35,554 INFO [geoserver.wfs] - 
+Request: getFeature
+    service = wfs
+    version = 1.0.0
+    baseUrl = http://localhost:8088/geoserver/
+    query[0]:
+        srsName = EPSG:4326
+        typeName[0] = {agit}hoehenprofil_50_backup
+    outputFormat = application/json
+    resultType = results
+    viewParams[0] = {HP_DETAIL=50, HP_LINE=11.289209455796922 47.187612606972614bs 11.302853441012843 47.193911930284415, HP_SRID=4326}
+2020-07-06 09:23:35,555 INFO [wfs.json] - about to encode JSON
+2020-07-06 09:23:36,058 INFO [geoserver.flow] - releasing flow controllers for [wfs 1.0.0 GetFeature]
+2020-07-06 09:23:36,059 INFO [geoserver.flow] - Request completed, running requests: 0, blocked requests: 0
+2020-07-06 09:23:52,429 INFO [geoserver.wfs] - 
+Request: getServiceInfo
+2020-07-06 09:23:52,429 INFO [geoserver.flow] - Request [wfs 1.0.0 GetFeature] starting, processing through flow controllers
+2020-07-06 09:23:52,429 INFO [geoserver.flow] - Request control-flow performed, running requests: 1, blocked requests: 0
+2020-07-06 09:23:52,432 INFO [geoserver.wfs] - 
+Request: getFeature
+    service = wfs
+    version = 1.0.0
+    baseUrl = http://localhost:8088/geoserver/
+    query[0]:
+        srsName = EPSG:4326
+        typeName[0] = {agit}hoehenprofil_50_backup
+    outputFormat = application/json
+    resultType = results
+    viewParams[0] = {HP_DETAIL=50, HP_LINE=12.9969399003006 47.80473844805739bs 13.010669696744282 47.782365826986094, HP_SRID=4326}
+2020-07-06 09:23:52,434 INFO [wfs.json] - about to encode JSON
+2020-07-06 09:23:52,960 INFO [geoserver.flow] - releasing flow controllers for [wfs 1.0.0 GetFeature]
+2020-07-06 09:23:52,960 INFO [geoserver.flow] - Request completed, running requests: 0, blocked requests: 0
+2020-07-06 09:24:36,710 INFO [geoserver.wfs] - 
+Request: getServiceInfo
+2020-07-06 09:24:36,711 INFO [geoserver.flow] - Request [wfs 1.0.0 GetFeature] starting, processing through flow controllers
+2020-07-06 09:24:36,711 INFO [geoserver.flow] - Request control-flow performed, running requests: 1, blocked requests: 0
+2020-07-06 09:24:36,713 INFO [geoserver.wfs] - 
+Request: getFeature
+    service = wfs
+    version = 1.0.0
+    baseUrl = http://localhost:8088/geoserver/
+    query[0]:
+        srsName = EPSG:4326
+        typeName[0] = {agit}hoehenprofil_50_backup
+    outputFormat = application/json
+    resultType = results
+    viewParams[0] = {HP_DETAIL=50, HP_LINE=13.01568157502691 47.80185591898276bs 13.011905876947681 47.79989570784702bs 12.99199765071162 47.792284775391956bs 12.987020594152614 47.78986288127193bs 12.9846178771931 47.78663351354022bs 12.979812443274033 47.78651817526727bs 12.971917801835616 47.78432669945317, HP_SRID=4326}
+2020-07-06 09:24:36,714 INFO [wfs.json] - about to encode JSON
+2020-07-06 09:24:37,252 INFO [geoserver.flow] - releasing flow controllers for [wfs 1.0.0 GetFeature]
+2020-07-06 09:24:37,253 INFO [geoserver.flow] - Request completed, running requests: 0, blocked requests: 0
+2020-07-06 09:25:36,653 INFO [geoserver.wfs] - 
+Request: getServiceInfo
+2020-07-06 09:25:36,654 INFO [geoserver.flow] - Request [wfs 1.0.0 GetFeature] starting, processing through flow controllers
+2020-07-06 09:25:36,654 INFO [geoserver.flow] - Request control-flow performed, running requests: 1, blocked requests: 0
+2020-07-06 09:25:36,656 INFO [geoserver.wfs] - 
+Request: getFeature
+    service = wfs
+    version = 1.0.0
+    baseUrl = http://localhost:8088/geoserver/
+    query[0]:
+        srsName = EPSG:4326
+        typeName[0] = {agit}hoehenprofil_50_backup
+    outputFormat = application/json
+    resultType = results
+    viewParams[0] = {HP_DETAIL=50, HP_LINE=13.061574870501557 47.78865189188671bs 13.060888379941717 47.79006471009283bs 13.059987361081877 47.791448658035804bs 13.059901549761907 47.79263075105267bs 13.059558304481987 47.79361100291589bs 13.058099512042261 47.795081346039964bs 13.053937663023088 47.796868765961975bs 13.053208266803226 47.79753182545863bs 13.0549244932029 47.79911736820551bs 13.053336983783222 47.799982189309624bs 13.048960606464085 47.800674035827875bs 13.045528153664774 47.80104878217839bs 13.045785587624723 47.80142352582567bs 13.046386266864593 47.80188474506529bs 13.048788983824103 47.802115353149524bs 13.050033247963867 47.80257656624696bs 13.05041939890377 47.80312425148172bs 13.052221436623414 47.80358545562182bs 13.052650493223343 47.803902531092824bs 13.053551512083143 47.80407548053399bs 13.0549244932029 47.80421960462843, HP_SRID=4326}
+2020-07-06 09:25:36,658 INFO [wfs.json] - about to encode JSON
+2020-07-06 09:25:37,182 INFO [geoserver.flow] - releasing flow controllers for [wfs 1.0.0 GetFeature]
+2020-07-06 09:25:37,182 INFO [geoserver.flow] - Request completed, running requests: 0, blocked requests: 0
+2020-07-06 09:27:01,959 INFO [geoserver.wfs] - 
+Request: getServiceInfo
+2020-07-06 09:27:01,962 INFO [geoserver.flow] - Request [wfs 1.0.0 GetFeature] starting, processing through flow controllers
+2020-07-06 09:27:01,962 INFO [geoserver.flow] - Request control-flow performed, running requests: 1, blocked requests: 0
+2020-07-06 09:27:01,966 INFO [geoserver.wfs] - 
+Request: getFeature
+    service = wfs
+    version = 1.0.0
+    baseUrl = http://localhost:8088/geoserver/
+    query[0]:
+        srsName = EPSG:4326
+        typeName[0] = {agit}hoehenprofil_50_backup
+    outputFormat = application/json
+    resultType = results
+    viewParams[0] = {HP_DETAIL=50, HP_LINE=13.061775131018488 47.788680725295215bs 13.061002310411176 47.79003587745213bs 13.060057751891138 47.79153515355857bs 13.060143620847525 47.79297672440995bs 13.05928493128383 47.79401463066147bs 13.057996896938288 47.79505251618253bs 13.055426109216308 47.79623452722126bs 13.05336525426346 47.79735885423182bs 13.054910895478114 47.79908854058746bs 13.053451123219842 47.79989570784702bs 13.050145168399665 47.800443421345506bs 13.04881419957595 47.80073168928853bs 13.049071806445065 47.80127939397355bs 13.046968017014043 47.801077608708766bs 13.045679982668505 47.801308220375965bs 13.046753344623099 47.80208652719499bs 13.048857134054124 47.802115353149524bs 13.050316906312394 47.80243243759387bs 13.049973430486935 47.803008949806895bs 13.050960923485146 47.80326837821536bs 13.05276417156888 47.80393135603966bs 13.054009271436248 47.80416195503863bs 13.056155995345444 47.80433490361606bs 13.057916308951006 47.804594325402526, HP_SRID=4326}
+2020-07-06 09:27:01,970 INFO [wfs.json] - about to encode JSON
+2020-07-06 09:27:02,501 INFO [geoserver.flow] - releasing flow controllers for [wfs 1.0.0 GetFeature]
+2020-07-06 09:27:02,501 INFO [geoserver.flow] - Request completed, running requests: 0, blocked requests: 0
+2020-07-06 09:28:23,953 INFO [geoserver.wfs] - 
+Request: getServiceInfo
+2020-07-06 09:28:23,953 INFO [geoserver.flow] - Request [wfs 1.0.0 GetFeature] starting, processing through flow controllers
+2020-07-06 09:28:23,954 INFO [geoserver.flow] - Request control-flow performed, running requests: 1, blocked requests: 0
+2020-07-06 09:28:23,956 INFO [geoserver.wfs] - 
+Request: getFeature
+    service = wfs
+    version = 1.0.0
+    baseUrl = http://localhost:8088/geoserver/
+    query[0]:
+        srsName = EPSG:4326
+        typeName[0] = {agit}hoehenprofil_50_backup
+    outputFormat = application/json
+    resultType = results
+    viewParams[0] = {HP_DETAIL=100, HP_LINE=13.08050325241466 47.77555987224657bs 13.082392369454741 47.78351929033643bs 13.082048893629278 47.78605681961615bs 13.074835901294344 47.79193879742789bs 13.072946784254224 47.799319161084114bs 13.069512025999487 47.80715964886966bs 13.06624900565752 47.81223227508317bs 13.06269768759718 47.82093528605559bs 13.060894439513442 47.82197263376233bs 13.059949880993406 47.8237591284448bs 13.060894439513442 47.829924944207306bs 13.062440080728063 47.831768784210354, HP_SRID=4326}
+2020-07-06 09:28:23,957 INFO [wfs.json] - about to encode JSON
+2020-07-06 09:28:24,479 INFO [geoserver.flow] - releasing flow controllers for [wfs 1.0.0 GetFeature]
+2020-07-06 09:28:24,479 INFO [geoserver.flow] - Request completed, running requests: 0, blocked requests: 0
+2020-07-06 09:30:45,996 INFO [georss.GeoRSSPoller] - destroy() invoked
+2020-07-06 09:30:45,997 INFO [geowebcache.GeoWebCacheDispatcher] - GeoWebCacheDispatcher.destroy() was invoked, shutting down.
+2020-07-06 09:30:46,012 INFO [diskquota.DiskQuotaMonitor] - Disk quota monitor shutting down...
+2020-07-06 09:30:46,012 INFO [diskquota.DiskQuotaMonitor] - Shutting down quota usage monitor...
+2020-07-06 09:30:46,012 INFO [diskquota.QuotaUpdatesMonitor] - Shutting down quota usage monitor...
+2020-07-06 09:30:46,015 INFO [diskquota.DiskQuotaMonitor] - Shutting down quota statistics gathering monitor...
+2020-07-06 09:30:46,016 INFO [diskquota.QueuedQuotaUpdatesConsumer] - Shutting down quota update background task due to InterruptedException
+2020-07-06 09:30:46,019 INFO [diskquota.QueuedUsageStatsConsumer] - Shutting down quota update background task due to interrupted exception
+2020-07-06 09:30:46,020 INFO [seed.SeederThreadPoolExecutor] - Initiating shut down for running and pending seed tasks...
+2020-07-06 09:30:46,020 INFO [seed.SeederThreadPoolExecutor] - Seeder thread pool executor shut down complete.
+2020-07-06 09:30:46,021 INFO [storage.DefaultStorageBroker] - Destroying StorageBroker
+2020-07-06 09:30:46,030 WARN [support.DisposableBeanAdapter] - Destroy method 'destroy' on bean with name 'gwcMemoryBlobStore' threw an exception: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@545489a4[Not completed, task = org.geowebcache.storage.blobstore.memory.MemoryBlobStore$BlobStoreTask@2d1b153f] rejected from java.util.concurrent.ThreadPoolExecutor@21efae6c[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 1]
+2020-07-06 09:30:46,032 WARN [support.DisposableBeanAdapter] - Invocation of destroy method failed on bean with name 'geoServerLoader': org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'wmsLifecycleHandler': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
